@@ -7,6 +7,7 @@
 ![S CMD)(SE Y7Z`N~J20VST6](https://user-images.githubusercontent.com/79557958/162120555-21e4ea76-3cc6-48a2-a662-59f286db1bfe.png)
 
 ![%{_092 9~VL}1U{MK@@M$WH](https://user-images.githubusercontent.com/79557958/162121146-deba48fb-8d2e-435c-a840-58115e3e65fe.png)
+<img src="https://user-images.githubusercontent.com/79557958/162121146-deba48fb-8d2e-435c-a840-58115e3e65fe.png" width="200" height="200" alt="微信小程序"/><br/>
 
 
 ### 信息显示
