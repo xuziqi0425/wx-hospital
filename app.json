@@ -1,0 +1,43 @@
+{
+  "pages":[
+   
+    "pages/web1/web1",
+    "pages/demo/demo",
+    "pages/web3/web3",
+    "pages/web2/web2",
+     "pages/test/test",
+    "pages/index/index",
+    "pages/menu/menu"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#3CB371",
+    "navigationBarTitleText": "胸痛中心患者信息采集平台",
+    "navigationBarTextStyle":"black",
+    "backgroundColorBottom": "#dcdcdc"
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#1E90FF",
+    "borderStyle":"black" ,
+    "list": [{
+      "pagePath": "pages/web1/web1",
+      "text": "首页",
+      "iconPath": "images/index-2.png",
+      "selectedIconPath": "images/index-1.png"
+    },{
+      "pagePath": "pages/menu/menu",
+      "text": "菜单",
+      "iconPath": "images/text-1.png",
+      "selectedIconPath": "images/text-2.png"
+    },{
+      "pagePath": "pages/index/index",
+      "text": "我的",
+      "iconPath": "images/mine-1.png",
+      "selectedIconPath": "images/mine-2.png"
+    }
+  ]
+  },
+
+  "sitemapLocation": "sitemap.json"
+}

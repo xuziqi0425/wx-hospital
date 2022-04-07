@@ -1,0 +1,2437 @@
+<navigator url="/pages/web3/web3"> <button size="mini"disabled='{{disabled}}'>跳转到下一页</button></navigator>
+<navigator url="/pages/web1/web1" open-type="switchTab"> <button size="mini" disabled='{{disabled}}'>跳转到上一页</button></navigator>
+<view class="a">胸痛诊疗</view>
+<!-- 心电图 -->
+<form bindsubmit="formSubmit1" bindreset="formReset1">
+  <view class="siction">心电图</view>
+  <view class=" section">填写人：
+    <input style="border-bottom:1px solid black;" name="fillIn"></input>
+  </view>
+  <view class="a3">
+    <!-- 无心电图 -->
+    <view class="a4">
+      <radio-group name="xinDianTu">
+        <label>
+          <radio value="wu" />无</label>
+      </radio-group>
+
+      <view class="section">未获得原因:
+        <input style="border-bottom:1px solid black;" name="noReason"></input>
+      </view>
+    </view>
+
+    <!-- 有心电图 -->
+    <view class="a4">
+      <radio-group bindchange="youXinDianTu">
+        <label>
+          <radio value="you" />有</label>
+      </radio-group>
+      <text>首份心电图时间:</text>
+      <view class="section">
+        <input type="number" class="section" style="border-bottom:1px solid black" name="firstMapTime">
+        </input>
+      </view>
+      <text>心电图诊断时间：</text>
+      <view class="section">
+
+        <input type="number" class="section" style="border-bottom:1px solid black" name="mapDiagnosisTime">
+        </input>
+      </view>
+
+      <view class="section">
+        远程心电图传输：</view>
+      <view class="a5">
+
+        <radio-group name="yuanChengXinDianTu">
+          <label>
+            <radio value="接收120/网络医院心电图">接收120/网络医院心电图</radio>
+          </label>
+          <label>
+            <radio value="未传输">未传输</radio>
+          </label>
+        </radio-group>
+        <text>时间：</text>
+        <view class="section">
+
+          <input type="number" class="section" style="border-bottom:1px solid black" name="acceptTime">
+          </input>
+        </view>
+        方式：
+
+        <radio-group name="chuanShuFangShi">
+          <label>
+            <radio value="实时监控">实时监控</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="微信群">微信群</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="其他">其他</radio>
+          </label>
+        </radio-group>
+
+      </view>
+      <view class="a5">
+        <radio-group name="yuanChengXinDianTu2">
+          <label>
+            <radio value="未传输">未传输</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+        </radio-group>
+      </view>
+    </view>
+  </view>
+  <button size="mini" type="primary" form-type="submit" plain>提交数据</button>
+  <button size="mini" type="warn" form-type="reset">重置数据</button>
+</form>
+
+<!-- 实验室检查 -->
+<form bindsubmit="formSubmit2" bindreset="formReset2">
+  <view class="section">
+    实验室检查</view>
+  <view class="section">填写人：
+    <input style="border-bottom:1px solid black;" name="fillIn2"></input>
+  </view>
+  <view class="a3">
+    肌钙蛋白
+    <view class="a4">
+      <radio-group name="jiGaiDanBai">
+        <label>
+          <radio value="shi">是</radio>
+        </label>
+      </radio-group>
+
+      <view class="a5">
+        首次肌钙蛋白
+
+        <radio-group name="jiGaiDanBaiLeiXing">
+          <label>
+            <radio value="tnt">TnT</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="tni" />TnI</label>
+        </radio-group>
+        <text>数值：</text>
+        <view class="section">
+          <input type="number" class="section" style="border-bottom:1px solid black" name="number">
+          </input>ng/ml
+        </view>
+
+        <radio-group name="jiGaiDanBaiYinYangXing">
+          <label>
+            <radio value="yangXing">阳性</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="yinXing" />阴性</label>
+        </radio-group>
+        <text>抽血完成时间：</text>
+        <view class="section">
+
+          <input type="number" class="section" style="border-bottom:1px solid black" name="drawBloodOkTime">
+          </input>
+        </view>
+        <text>获得报告时间：</text>
+        <view class="section">
+
+          <input type="number" class="section" style="border-bottom:1px solid black" name="getReporterTime">
+          </input>
+        </view>
+      </view>
+      <view class="section">
+        <radio-group name="jiGaiDanBai2">
+          <label>
+            <radio value="fou">否</radio>
+          </label>
+        </radio-group>
+      </view>
+    </view>
+
+
+    <!-- 实验室检查的几种指标 -->
+    <view class="a4">
+
+      <!-- 肌酐 -->
+      <text>肌酐</text>
+      <view class="section">
+        <radio-group name="jiGan">
+          <label>
+            <radio value="shi" />是</label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="fou" />否</label>
+        </radio-group>
+
+      </view>
+      <text>数值：</text>
+      <view class="section">
+        <input type="number" class="section" style="border-bottom:1px solid black" name="jigan">
+        </input>umol/l
+      </view>
+
+      <!-- 二聚体 -->
+      <text>二聚体</text>
+      <view class="section">
+
+        <radio-group name="erJuTi">
+          <label>
+            <radio value="shi" />是</label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="fou">否</radio>
+          </label>
+        </radio-group>
+      </view>
+      <text>数值：</text>
+      <view class="section">
+        <input type="number" class="section" style="border-bottom:1px solid black" name="erjuti">
+        </input>mg/L
+      </view>
+
+      <!-- BNP -->
+      <text> BNP</text>
+      <view class="section">
+
+        <radio-group name="bnp">
+          <label>
+            <radio value="shi" />是</label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="fou">否</radio>
+          </label>
+        </radio-group>
+      </view>
+      <text>数值：</text>
+      <view class="section">
+        <input type="number" class="section" style="border-bottom:1px solid black" name="bnp">
+        </input>pg/ml
+      </view>
+
+      <!-- NT-proBNP -->
+      <text>NT-proBNP</text>
+      <view class="section">
+
+        <radio-group name="nt-probnp">
+          <label>
+            <radio value="shi" />是</label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="fou">否</radio>
+          </label>
+        </radio-group>
+      </view>
+      <text>数值：</text>
+      <view class="section">
+        <input type="number" class="section" style="border-bottom:1px solid black" name="nt_probnp">
+        </input>pg/ml
+      </view>
+
+      <!-- Myo -->
+      <text>Myo</text>
+      <view class="section">
+
+        <radio-group name="myo">
+          <label>
+            <radio value="shi" />是</label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="fou">否</radio>
+          </label>
+        </radio-group>
+      </view>
+      <text>数值：</text>
+      <view class="section">
+        <input type="number" class="section" style="border-bottom:1px solid black" name="myo">
+        </input>ng/ml
+      </view>
+
+      <!-- CKNB -->
+      <text>CKNB</text>
+      <view class="section">
+        <radio-group name="cknb">
+          <label>
+            <radio value="shi" />是</label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="fou">否</radio>
+          </label>
+        </radio-group>
+      </view>
+      <text>数值：</text>
+      <view class="section">
+
+        <input type="number" class="section" style="border-bottom:1px solid black" name="cknb">
+        </input>umol/l
+      </view>
+
+    </view>
+
+  </view>
+
+  <button size="mini" type="primary" form-type="submit" plain>提交数据</button>
+  <button size="mini" type="warn" form-type="reset">重置数据</button>
+</form>
+
+<!-- 心内会诊 -->
+<form bindsubmit="formSubmit3" bindreset="formReset3">
+  <view class="section">
+    心内会诊</view>
+  <view class="section">填写人：
+    <input type="text" style="border-bottom:1px solid black;" name="fillIn3"></input>
+  </view>
+  <view class="a3">
+    <!-- 是心内会诊 -->
+    <radio-group name="shiFouXinNeiHuiZhen">
+      <label>
+        <radio value="shi">是</radio>
+      </label>
+    </radio-group>
+    <view class="a4">
+      <!-- 心内会诊方式 -->
+      <radio-group name="huiZhenFangShi">
+        <label>
+          <radio value="yuanChengHuiZhen">远程会诊</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="xianChangHuiZhen">现场会诊</radio>
+        </label>
+      </radio-group>
+      <text>通知时间：</text>
+      <view class="section">
+        <input type="number" class="section" style="border-bottom:1px solid black" name="informConsultationTime">
+        </input>
+      </view>
+      <text>会诊时间：</text>
+      <view class="section">
+        <input type="number" class="section" style="border-bottom:1px solid black" name="consultationTime">
+        </input>
+      </view>
+
+    </view>
+    <view class="section">
+
+      <!-- 不心内会诊 -->
+      <radio-group name="shiFouXinNeiHuiZhen2">
+        <label>
+          <radio value="fou">否</radio>
+        </label>
+      </radio-group>
+
+    </view>
+  </view>
+
+  <button size="mini" type="primary" form-type="submit" plain>提交数据</button>
+  <button size="mini" type="warn" form-type="reset">重置数据</button>
+</form>
+
+<!-- 诊断 -->
+<form bindsubmit="formSubmit4" bindreset="formReset4">
+  <view class="section">诊断</view>
+  <view class="section">填写人：
+    <input type="text" style="border-bottom:1px solid black;" name="fillIn4"></input>
+  </view>
+
+  <!-- 初步诊断结果 -->
+  <view class="a3">
+    <view class="section">
+
+      <checkbox-group name="chuBuZhenDuan">
+        <label>
+          <checkbox value="stemi" />STEMI</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="nstemi" />NSTEMI</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="ua" />UA</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="zhuDongMaiJiaCeng" />主动脉夹层</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="feiDongMaiShuanSai" />肺动脉栓塞</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="feiACSXinYuanXingXiongTong" />非ACS心源性胸痛</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="qiTaFeiXinYuanXingXiongTong" />其他非心源性胸痛</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="daiCha" />待查</label><text decode="{{true}}"> &emsp;</text>
+      </checkbox-group>
+
+    </view>
+
+    <!-- 患者自愿放弃后续治疗 -->
+    <text>患者是否自愿放弃后续治疗：</text>
+    <view class="section">
+      <radio-group name="huanZheZiYuanFangQiHouXuZhiLiao">
+        <label>
+          <radio value="shi">是</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="fou">否</radio>
+        </label>
+      </radio-group>
+
+    </view>
+    <!-- 初步诊断时间 -->
+    <text>初步诊断时间：</text>
+    <view class=" section">
+      <input type="number" class="section" style="border-bottom:1px solid black" name="firstDiagnosisTime">
+      </input>
+    </view>
+    <!-- 诊断医生 -->
+    <view class="section">
+      医生：
+      <input type="text" class="section" style="border-bottom:1px solid black" name="doctor">
+      </input>
+    </view>
+    初步诊断ACS
+    <view class="a4">
+
+
+      <!-- Killip分级： -->
+      <view class="section">
+        Killip分级：
+
+        <radio-group name="killipFenji">
+          <label>
+            <radio value="i">I</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="ii">II</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="iii">III</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="iv">IV</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+        </radio-group>
+
+      </view>
+      <!-- NYHA分级： -->
+      <view class="section">
+        NYHA分级：
+
+        <radio-group name="nyhaFenji">
+          <label>
+            <radio value="i">I</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="ii">II</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="iii">III</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="iv">IV</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+        </radio-group>
+
+      </view>
+
+      <!-- 绕行急诊 -->
+      <view class="section">
+        绕行急诊：
+
+        <radio-group name="raoXingJiZhen">
+          <label>
+            <radio value="shi">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="fou">否</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+        </radio-group>
+
+      </view>
+
+      <!-- 绕行ICU -->
+      <view class="section">
+        绕行CCU：
+
+        <radio-group name="raoXingICU">
+          <label>
+            <radio value="shi">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="fou">否</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+        </radio-group>
+
+      </view>
+    </view>
+  </view>
+
+  <button size="mini" type="primary" form-type="submit" plain>提交数据</button>
+  <button size="mini" type="warn" form-type="reset">重置数据</button>
+</form>
+
+<view><button size="mini">ACS诊疗</button></view>
+<view class="a3">
+  <form bindsubmit="formSubmit5" bindreset="formReset5">
+
+    <radio-group name="orginMedician">
+      <label>
+        <radio value="orginMedician">初始药物治疗</radio>
+      </label>
+    </radio-group>
+
+
+    <view class="a4">
+      抗血小板治疗：
+
+      <radio-group name="kangXueXiaoBanZhiLiao">
+        <label>
+          <radio value="yes1">是</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="no1">否</radio>
+        </label>
+      </radio-group>
+
+      <view> 抗凝治疗：
+
+        <radio-group name="kangNingZhiLiao">
+          <label>
+            <radio value="yes2">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="no2">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view>他汀治疗：
+
+        <radio-group name="taTingZhiLiao">
+          <label>
+            <radio value="yes3">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="no3">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view>β阻剂：
+
+        <radio-group name="beiTaZuJi">
+          <label>
+            <radio value="yes4">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="no4">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+      <view class="section">抗血小板药物 </view>
+      <view class="tr">
+        <view class="td" style="width:20%">阿司匹林</view>
+        <view class="td1" style="width:80%">
+
+          <radio-group name="aSiPiLin">
+            <label>
+              <radio value="0mg">0mg</radio>
+            </label><text decode="{{true}}"> &emsp;</text>
+            <label>
+              <radio value="100mg">100mg</radio>
+            </label><text decode="{{true}}"> &emsp;</text>
+            <label>
+              <radio value="300mg">300mg</radio>
+            </label><text decode="{{true}}"> &emsp;</text>
+            <label>
+              <radio value="qiTa1">其他</radio>
+            </label>
+          </radio-group>
+          <text>时间：</text>
+          <view class="section">
+            <input type="number" class="section" style="border-bottom:1px solid black" name="aSiPiLinTime">
+            </input>
+          </view>
+        </view>
+      </view>
+
+      <view class="tr">
+        <view class="td" style="width:20%">氯呲格雷</view>
+        <view class="td1" style="width:80%">
+
+          <radio-group name="luCiGeLei">
+            <label>
+              <radio value="0mg">0mg</radio>
+            </label><text decode="{{true}}"> &emsp;</text>
+            <label>
+              <radio value="300mg">300mg</radio>
+            </label><text decode="{{true}}"> &emsp;</text>
+            <label>
+              <radio value="600mg">600mg</radio>
+            </label><text decode="{{true}}"> &emsp;</text>
+            <label>
+              <radio value="qiTa2">其他</radio>
+            </label>
+          </radio-group>
+          <text>时间：</text>
+          <view class="section">
+            <input type="number" class="section" style="border-bottom:1px solid black" name="luCiGeLeiTime">
+            </input>
+          </view>
+        </view>
+      </view>
+
+      <view class="tr">
+        <view class="td" style="width:20%">替格瑞洛</view>
+        <view class="td1" style="width:80%">
+
+          <radio-group name="tiGeRuiLuo">
+            <label>
+              <radio value="0mg">0mg</radio>
+            </label><text decode="{{true}}"> &emsp;</text>
+            <label>
+              <radio value="90mg">100mg</radio>
+            </label><text decode="{{true}}"> &emsp;</text>
+            <label>
+              <radio value="180mg">300mg</radio>
+            </label><text decode="{{true}}"> &emsp;</text>
+            <label>
+              <radio value="qiTa3">其他</radio>
+            </label>
+          </radio-group>
+          <text>时间：</text>
+          <view class="section">
+            <input type="number" class="section" style="border-bottom:1px solid black" name="tiGeRuiLuoTime">
+            </input>
+          </view>
+        </view>
+      </view>
+      <text>抗凝药物：</text>
+      <view class="section">
+        <input type="number" class="section" style="border-bottom:1px solid black" name="Anticoagulants"></input>
+      </view>
+      <text>剂量</text>
+      <view class="section">
+        <input type="number" class="section" style="border-bottom:1px solid black" name="dose"></input>单位
+      </view>
+      <text>时间：</text>
+      <view class="section">
+        <input type="number" class="section" style="border-bottom:1px solid black" name="AnticoagulantsTime">
+        </input>
+      </view>
+    </view>
+    <view class="section">
+      填写人:
+      <input type="text" class="section" style="border-bottom:1px solid black" name="fillIn5">
+      </input>
+    </view>
+    <button size="mini" type="primary" form-type="submit" plain>提交数据</button>
+    <button size="mini" type="warn" form-type="reset">重置数据</button>
+  </form>
+</view>
+
+
+
+<form bindsubmit="formSubmit6" bindreset="formReset6">
+  <view>
+    <button size="mini">Grace评估</button>
+  </view>
+  <view class="a3">
+    <view class="section">
+
+      <checkbox-group name="gracePingGu">
+        <label>
+          <checkbox value="发病后曾出现心脏骤停">发病后曾出现心脏骤停</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="心电图ST段改变">心电图ST段改变</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="心肌坏死标志物升高">心肌坏死标志物升高</checkbox>
+        </label>
+      </checkbox-group>
+
+    </view>
+    Grace极高危
+    <view class="a5">
+
+      <checkbox-group name="graceJiGaoWei">
+        <label>
+          <checkbox value="急性心衰">急性心衰</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="致命性心律失常或心脏骤停">致命性心律失常或心脏骤停</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="血液动力学不稳定或心源性休克">血液动力学不稳定或心源性休克</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="心梗合并机械并发症">心梗合并机械并发症</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="反复的ST-T动态改变，尤其是伴随间歇性ST段抬高">反复的ST-T动态改变，尤其是伴随间歇性ST段抬高</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="药物治疗无效的反复发作或持续性胸痛">药物治疗无效的反复发作或持续性胸痛</checkbox>
+        </label>
+      </checkbox-group>
+
+    </view>
+    <view class="section">
+      填写人:
+      <input type="text" class="section" style="border-bottom:1px solid black" name="fillIn6">
+      </input>
+    </view>
+    Grace评分表
+    <view class="tr">
+      <view class="td">年龄(岁)</view>
+      <view class="td">分值</view>
+      <view class="td">心率(次/分)</view>
+      <view class="td">分值</view>
+      <view class="td">收缩压(mmHg)</view>
+      <view class="td">分值</view>
+      <view class="td">肌酐(umol/l)</view>
+      <view class="td">分值</view>
+      <view class="td">Killip分级</view>
+      <view class="td">分值</view>
+      <view class="td">危险因素</view>
+      <view class="td">分值</view>
+    </view>
+    <view class="tr">
+      <view class="td">0-30</view>
+      <view class="td">0</view>
+      <view class="td">0-50</view>
+      <view class="td">0</view>
+      <view class="td">0-80</view>
+      <view class="td">58</view>
+      <view class="td">0-34</view>
+      <view class="td">1</view>
+      <view class="td">I</view>
+      <view class="td">0</view>
+      <view class="td">发病后曾出</view>
+      <view class="td">39</view>
+    </view>
+    <view class="tr">
+      <view class="td">30-39</view>
+      <view class="td">8</view>
+      <view class="td">50-69</view>
+      <view class="td">3</view>
+      <view class="td">80-99</view>
+      <view class="td">53</view>
+      <view class="td">35-70</view>
+      <view class="td">4</view>
+      <view class="td">II</view>
+      <view class="td">20</view>
+      <view class="td">现心脏骤停</view>
+      <view class="td">39</view>
+    </view>
+    <view class="tr">
+      <view class="td">40-49</view>
+      <view class="td">25</view>
+      <view class="td">70-89</view>
+      <view class="td">9</view>
+      <view class="td">100-119</view>
+      <view class="td">43</view>
+      <view class="td">71-105</view>
+      <view class="td">7</view>
+      <view class="td">III</view>
+      <view class="td">39</view>
+      <view class="td">心电图</view>
+      <view class="td">28</view>
+    </view>
+    <view class="tr">
+      <view class="td">50-59</view>
+      <view class="td">41</view>
+      <view class="td">90-109</view>
+      <view class="td">15</view>
+      <view class="td">120-139</view>
+      <view class="td">34</view>
+      <view class="td">106-141</view>
+      <view class="td">10</view>
+      <view class="td">IV</view>
+      <view class="td">59</view>
+      <view class="td">ST段改变</view>
+      <view class="td">28</view>
+    </view>
+    <view class="tr">
+      <view class="td">60-69</view>
+      <view class="td">58</view>
+      <view class="td">110-149</view>
+      <view class="td">24</view>
+      <view class="td">140-159</view>
+      <view class="td">24</view>
+      <view class="td">142-176</view>
+      <view class="td">13</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">心肌坏死</view>
+      <view class="td">14</view>
+    </view>
+    <view class="tr">
+      <view class="td">70-79</view>
+      <view class="td">75</view>
+      <view class="td">150-199</view>
+      <view class="td">38</view>
+      <view class="td">160-199</view>
+      <view class="td">10</view>
+      <view class="td">177-353</view>
+      <view class="td">21</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">标志物升高</view>
+      <view class="td">14</view>
+    </view>
+    <view class="tr">
+      <view class="td">80-89</view>
+      <view class="td">91</view>
+      <view class="td">≥200</view>
+      <view class="td">46</view>
+      <view class="td">≥200</view>
+      <view class="td">0</view>
+      <view class="td">≥354</view>
+      <view class="td">28</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+    </view>
+    <view class="tr">
+      <view class="td">≥90</view>
+      <view class="td">100</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+    </view>
+    <view class="a4">
+      首次
+      <view class="tr">
+        <view class="td1">得分</view>
+        <view class="td1">
+          <input name="ageScore"></input>
+        </view>
+        <view class="td1">得分</view>
+        <view class="td1">
+          <input name="heartScore"></input>
+        </view>
+        <view class="td1">得分</view>
+        <view class="td1">
+          <input name="bloodScore"></input>
+        </view>
+        <view class="td1">得分</view>
+        <view class="td1">
+          <input name="jiGanScore"></input>
+        </view>
+        <view class="td1">得分</view>
+        <view class="td1">
+          <input name="killipScore"></input>
+        </view>
+        <view class="td1">得分</view>
+        <view class="td1">
+          <input name="dangerScore"></input>
+        </view>
+      </view>
+      <view class="section">
+
+        总分：<input type="number" class="section" style="border-bottom:1px solid black" name="allScore"></input>
+      </view>
+      <view class="section">
+        NSTE-ACS危险分层：</view>
+      <view class="section">
+
+        <radio-group name="nsteacsWeiXianFenCeng">
+          <label>
+            <radio value="极高危">极高危</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="高危">高危</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="中危">中危</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="低危">低危</radio>
+          </label>
+        </radio-group>
+      </view>
+      <view class="section">
+        填写人:
+        <input type="number" class="section" style="border-bottom:1px solid black" name="fillIn7">
+        </input>
+      </view>
+    </view>
+    <view class="a4">
+      <button size="mini">再次</button>
+      <view class="section">
+        <text>时间：</text></view>
+      <view class="section">
+
+
+        <input type="number" class="section" style="border-bottom:1px solid black" name="againTime">
+        </input>
+      </view>
+      <view class="section">
+        填写人:
+        <input type="number" class="section" style="border-bottom:1px solid black" name="fillIn7">
+        </input>
+      </view>
+      <view class="section">
+        总分：<input type="number" class="section" style="border-bottom:1px solid black" name="allScore2"></input>
+      </view>
+      NSTE-ACS危险分层：
+
+      <radio-group name="nsteacsWeiXianFenCeng2">
+        <label>
+          <radio value="转为STEMI">转为STEMI</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="极高危">极高危</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="高危">高危</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="中危">中危</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="低危">低危</radio>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <button size="mini" type="primary" form-type="submit" plain>提交数据</button>
+  <button size="mini" type="warn" form-type="reset">重置数据</button>
+</form>
+
+
+<form bindsubmit="formSubmit7" bindreset="formReset7">
+  <view class="a3">
+    <button size="mini">Crusade评分</button>
+    <view class="tr">
+      <view class="td">基线血细胞比容%</view>
+      <view class="td">分值</view>
+      <view class="td">收缩压mmHg</view>
+      <view class="td">分值</view>
+      <view class="td">肌酰清除率ml/min</view>
+      <view class="td">分值</view>
+      <view class="td">心率(次/分)</view>
+      <view class="td">分值</view>
+      <view class="td">其他危险因素</view>
+      <view class="td">分值</view>
+    </view>
+    <view class="tr">
+      <view class="td">0-31</view>
+      <view class="td">9</view>
+      <view class="td">≤90</view>
+      <view class="td">10</view>
+      <view class="td">≤15</view>
+      <view class="td">39</view>
+      <view class="td">≤70</view>
+      <view class="td">0</view>
+      <view class="td">女性</view>
+      <view class="td">8</view>
+    </view>
+    <view class="tr">
+      <view class="td">31-33.9</view>
+      <view class="td">7</view>
+      <view class="td">91-100</view>
+      <view class="td">8</view>
+      <view class="td">16-30</view>
+      <view class="td">35</view>
+      <view class="td">71-80</view>
+      <view class="td">1</view>
+      <view class="td">有心衰征象</view>
+      <view class="td">7</view>
+    </view>
+    <view class="tr">
+      <view class="td">34-36.9</view>
+      <view class="td">3</view>
+      <view class="td">101-120</view>
+      <view class="td">5</view>
+      <view class="td">31-60</view>
+      <view class="td">28</view>
+      <view class="td">81-90</view>
+      <view class="td">3</view>
+      <view class="td">糖尿病</view>
+      <view class="td">6</view>
+    </view>
+    <view class="tr">
+      <view class="td">37-39.9</view>
+      <view class="td">2</view>
+      <view class="td">121-180</view>
+      <view class="td">1</view>
+      <view class="td">61-90</view>
+      <view class="td">17</view>
+      <view class="td">91-100</view>
+      <view class="td">6</view>
+      <view class="td">既往血管性疾病</view>
+      <view class="td">6</view>
+    </view>
+    <view class="tr">
+      <view class="td">≥40</view>
+      <view class="td">0</view>
+      <view class="td">181-200</view>
+      <view class="td">3</view>
+      <view class="td">91-120</view>
+      <view class="td">7</view>
+      <view class="td">101-110</view>
+      <view class="td">8</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+    </view>
+    <view class="tr">
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">≥201</view>
+      <view class="td">5</view>
+      <view class="td">≥120</view>
+      <view class="td">0</view>
+      <view class="td">111-120</view>
+      <view class="td">10</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+    </view>
+    <view class="tr">
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+      <view class="td">≥120</view>
+      <view class="td">11</view>
+      <view class="td">/</view>
+      <view class="td">/</view>
+    </view>
+    <view class="tr">
+      <view class="td">得分</view>
+      <view class="td">
+        <input name="jiXianScore" />
+      </view>
+      <view class="td">得分</view>
+      <view class="td">
+        <input name="bloodScore2" />
+      </view>
+      <view class="td">得分</view>
+      <view class="td">
+        <input name="jiGanScore2" />
+      </view>
+      <view class="td">得分</view>
+      <view class="td">
+        <input name="heartScore2" />
+      </view>
+      <view class="td">得分</view>
+      <view class="td">
+        <input name="otherDangerScore" />
+      </view>
+    </view>
+    <view class="section">
+      总分：<input type="number" class="section" style="border-bottom:1px solid black" name="allScore3">
+      </input>
+    </view>
+    <view class="section">
+      危险分层：</view>
+    <view class="section">
+
+      <radio-group name="weiXianFenCeng">
+        <label>
+          <radio value="极高危">极高危</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="高危">高危</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="中危">中危</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="低危">低危</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="极低危">极低危</radio>
+        </label>
+      </radio-group>
+
+    </view>
+    <view class="section">
+      填写人：
+      <input type="number" class="section" style="border-bottom:1px solid black" name="fillIn8">
+      </input>
+    </view>
+  </view>
+
+  <button size="mini" type="primary" form-type="submit" plain>提交数据</button>
+  <button size="mini" type="warn" form-type="reset">重置数据</button>
+</form>
+
+
+<form bindsubmit="formSubmit8" bindreset="formReset8">
+  <view class="a3">
+    <button size="mini">NSTE-ACS处理策略</button>
+    <view class="a4">
+
+      <radio-group name="nsteacsChuLiCeLue">
+        <label>
+          <radio value="保守治疗">保守治疗</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="72h内介入治疗">72h内介入治疗</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="择期介入治疗">择期介入治疗</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="CABG治疗">CABG治疗</radio>
+        </label>
+      </radio-group>
+
+      注：不需要填写“导管室”项
+    </view>
+    <view class="a4">
+
+      <radio-group name="erSiHourNeiJieRuZhiLiao">
+        <label>
+          <radio value="24h内介入治疗">24h内介入治疗</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+      </radio-group>
+      <text>实际介入治疗时间：</text>
+      <view class="section">
+        <input type="number" class="section" style="border-bottom:1px solid black" name="actualCureTime">
+        </input>
+      </view>
+      注：不需要填写“导管室”项
+    </view>
+    <view class="a4">
+
+      <radio-group name="erHourNeiJieRuZhiLiao">
+        <label>
+          <radio value="2h内介入治疗">2h内介入治疗</radio>
+        </label>
+      </radio-group>
+      <text>决定医生：</text>
+      <view class="section">
+        <input type="number" class="section" style="border-bottom:1px solid black" name="decideDoctor">
+        </input>
+      </view>
+      <text>决定介入手术时间：</text>
+      <view class="section">
+        <input type="number" class="section" style="border-bottom:1px solid black" name="decideOptionTime">
+        </input>
+      </view>
+      <text>启动导管室时间：</text>
+      <view class="section">
+
+        <input type="number" class="section" style="border-bottom:1px solid black" name="startPipeTime">
+        </input>
+      </view>
+      <text>开始知情同意时间：</text>
+      <view class="section">
+
+        <input type="number" class="section" style="border-bottom:1px solid black" name="beginInformedTime2">
+        </input>
+      </view>
+      <text> 签署知情同意时间：</text>
+      <view class="section">
+
+        <input type="number" class="section" style="border-bottom:1px solid black" name="signInformedTime2">
+        </input>
+      </view>
+      注：不需要填写“导管室”项
+    </view>
+    <view class="section">
+      填写人：<input type="number" class="section" style="border-bottom:1px solid black" name="fillIn9">
+      </input>
+    </view>
+  </view>
+  <button size="mini" type="primary" form-type="submit" plain>提交数据</button>
+  <button size="mini" type="warn" form-type="reset">重置数据</button>
+</form>
+<form bindsubmit="formSubmit9" bindreset="formReset9">
+  <view class="a3">
+
+
+    <radio-group name="qiTaBiaoXian">
+      <label>
+        <radio value="生命体征平稳，无持续缺血表现">生命体征平稳，无持续缺血表现</radio>
+      </label><text decode="{{true}}"> &emsp;</text>
+      <label>
+        <radio value="超过再灌注时间窗">超过再灌注时间窗</radio>
+      </label><text decode="{{true}}"> &emsp;</text>
+      <label>
+        <radio value="高出血风险">高出血风险</radio>
+      </label><text decode="{{true}}"> &emsp;</text>
+      <label>
+        <radio value="出血活动期">出血活动期</radio>
+      </label>
+    </radio-group>
+
+  </view>
+  <view class="a3">
+    STEMI再灌注措施
+    <radio-group name="stemiZaiGuanZhiCuoShi">
+      <label>
+        <radio value="fou">否</radio>
+      </label>
+    </radio-group>
+    <view class="a4">
+
+      <radio-group name="stemiCuoShi">
+        <label>
+          <radio value="严重肾功能不全">严重肾功能不全</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="经济原因限制">经济原因限制</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="拒绝或放弃">拒绝或放弃</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="其他原因">其他原因</radio>
+        </label>
+      </radio-group>
+
+    </view>
+    <radio-group name="zhiJiePCI">
+      <label>
+        <radio value="直接PCI">直接PCI</radio>
+      </label>
+    </radio-group>
+    <view class="a4">
+      <text>决定医生：</text>
+      <view class="section">
+        <input type="number" class="section" style="border-bottom:1px solid black" name="decideDoctor2">
+        </input>
+      </view>
+      <text> 决定介入手术时间：</text>
+      <view class="section">
+
+        <input type="number" class="section" style="border-bottom:1px solid black" name="decideOptionTime2">
+        </input>
+      </view>
+      <text>启动导管室时间：</text>
+      <view class="section">
+
+        <input type="number" class="section" style="border-bottom:1px solid black" name="startPipeTime2">
+        </input>
+      </view>
+      <text>开始知情同意时间：</text>
+      <view class="section">
+
+        <input type="number" class="section" style="border-bottom:1px solid black" name="beginInformedTime3">
+        </input>
+      </view>
+      <text> 签署知情同意时间：</text>
+      <view class="section">
+
+        <input type="number" class="section" style="border-bottom:1px solid black" name="signInformedTime3">
+        </input>
+      </view>
+      注：不需要填写“导管室”项
+    </view>
+    <view class="section">
+      填写人：<input type="number" class="section" style="border-bottom:1px solid black" name="fillIn10">
+      </input>
+    </view>
+    <view class="a4">
+
+      <radio-group name="cuoShi">
+        <label>
+          <radio value="溶栓">溶栓</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="补救PCI">补救PCI</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="溶栓后介入">溶栓后介入</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="择期介入">择期介入</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="转运PCI">转运PCI</radio>
+        </label>
+      </radio-group>
+
+    </view>
+    <view class="a4">
+      <view class="section">
+        <text>决定时间：</text></view>
+      <view class="section">
+
+        <input type="number" class="section" style="border-bottom:1px solid black" name="decideOptionTime3">
+        </input>
+      </view>
+      <text> 开始时间：</text>
+      <view class="section">
+
+        <input type="number" class="section" style="border-bottom:1px solid black" name="startTime3">
+        </input>
+      </view>
+    </view>
+  </view>
+
+  <button size="mini" type="primary" form-type="submit" plain>提交数据</button>
+  <button size="mini" type="warn" form-type="reset">重置数据</button>
+</form>
+
+
+<form bindsubmit="formSubmit10" bindreset="formReset10">
+  <view>
+    <button size="mini">导管室</button>
+  </view>
+  <view class="a3">
+    <view class="section">
+      <text>导管室激活时间：</text>
+    </view>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="pipeActivationTime">
+      </input>
+    </view>
+    <text>患者到达导管室时间：</text>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="getPipeTime">
+      </input>
+    </view>
+    <text>开始穿刺时间：</text>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="startPunctureTime">
+      </input>
+    </view>
+    <text>造影开始时间：</text>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="radiographyTime">
+      </input>
+    </view>
+    <text>造影时TIMI</text>
+    <view class="section">
+      <input type="number" class="section" style="border-bottom:1px solid black" name="timi">
+      </input>级
+    </view>
+    <text>术中抗凝给药时间：</text>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="anticoagulationTime">
+      </input>
+    </view>
+    <text>术中抗凝物：</text>
+    <view class="section">
+      <input type="number" class="section" style="border-bottom:1px solid black" name="anticoagulation"></input>
+    </view><text>剂量</text>
+    <view class="section">
+      <input type="number" class="section" style="border-bottom:1px solid black" name="anticoagulationDose">
+      </input>单位
+    </view>
+    <text>导丝通过时间：</text>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="wireTime">
+      </input>
+    </view>
+    <text>手术结束时间：</text>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="overOptionTime">
+      </input>
+    </view>
+    <text>介入医师：</text>
+    <view class="section">
+
+      <input class="section" style="border-bottom:1px solid black" name="interventionDoctor">
+      </input>
+    </view>
+    <text>D2W时间是否延误：</text>
+    <view class="section">
+
+      <radio-group name="d2wShiJianShiFouYanWu">
+        <label>
+          <radio value="yes">是</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="fou">否</radio>
+        </label>
+      </radio-group>
+
+    </view>
+
+    <view class="section">
+      延误原因：</view>
+    <view class="section">
+      <checkbox-group name="d2wYanWuYuanYin">
+        <label>
+          <checkbox value="症状不明显延误诊断">症状不明显延误诊断</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="家属未到场">家属未到场</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="医生决策失误">医生决策失误</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="难以绕行病变区域">难以绕行病变区域</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="排队挂号、缴费、办住院时间长">排队挂号、缴费、办住院时间长</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="急诊科处理时间长">急诊科处理时间长</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="手术期间出现并发症">手术期间出现并发症</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="未实行绕行急诊方案">未实行绕行急诊方案</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="导管室人员未到位">导管室人员未到位</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="药物缺乏">药物缺乏</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="知情同意时间过长">知情同意时间过长</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="病情不稳定">病情不稳定</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="绕行急诊科但未直接导管室">绕行急诊科但未直接导管室</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="导管室占台">导管室占台</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="是转运时间长">是转运时间长</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="经费问题">经费问题</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="心内科会时间长">心内科会时间长</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="血管通路困难">血管通路困难</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="急需影像学资料再行PCI">急需影像学资料再行PCI</checkbox>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="其他原因">其他原因</checkbox>
+        </label>
+      </checkbox-group>
+    </view>
+    <view class="section">
+      其他原因<input class="ipt11"></input>
+    </view>
+
+    <view class="section">
+      入路：</view>
+    <view class="section"><text decode="{{true}}"> &emsp;</text>
+      <radio-group name="ruLu">
+        <label>
+          <radio value="右侧桡动脉">右侧桡动脉</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="左侧桡动脉">左侧桡动脉</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="股动脉">股动脉</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="其他">其他</radio>
+        </label>
+      </radio-group>
+    </view>
+    <view class="section">
+      其他
+      <input class="ipt11"></input>
+    </view>
+
+    <view class="section">
+      罪犯血管</view>
+    <view class="a4">
+      <text>罪犯血管：</text>
+      <view class="section">
+        <input class="section" style="border-bottom:1px solid black" name="criminalBlood">
+        </input>段</view>
+      <text>狭窄程度：</text>
+      <view class="section">
+
+        <input class="section" style="border-bottom:1px solid black" name="narrow">
+        </input>%</view>
+      <text>造影时TIMI</text>
+      <view class="section">
+
+        <input class="section" style="border-bottom:1px solid black" name="radiographyTimi">
+        </input>
+        级
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}">支架内血栓: &emsp;</text>
+
+
+        <radio-group name="zhiJiaNeiXueShuan">
+          <label>
+            <radio value="是">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}"> 分叉病变: &emsp;</text>
+        <radio-group name="fenChaBingBian">
+          <label>
+            <radio value="是">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}">CTO: &emsp;</text>
+        <radio-group name="cto">
+          <label>
+            <radio value="是">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}">钙化病变: &emsp;</text>
+
+        <radio-group name="gaiHuaBingBian">
+          <label>
+            <radio value="是">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}">PCI: &emsp;</text>
+
+        <radio-group name="pci">
+          <label>
+            <radio value="是">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        术中处理：</view>
+      <view class="section">
+        <radio-group name="shuZhongChuLi">
+          <label>
+            <radio value="植入支架">植入支架</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="PTCA">PTCA</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="血栓抽吸">血栓抽吸</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="冠脉内溶栓">冠脉内溶栓</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="仅使用导丝">仅使用导丝</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="其他">其他</radio>
+          </label>
+        </radio-group>
+
+
+      </view>
+      <text>术后TIMI</text>
+      <view class="section">
+
+        <input class="section" style="border-bottom:1px solid black" name="optionedTimi">
+        </input>级
+      </view>
+      <text>植入支架</text>
+      <view class="section">
+
+        <input class="section" style="border-bottom:1px solid black" name="shelf">
+        </input>枚
+      </view>
+
+      <view class="section">
+        支架种类：</view>
+      <view class="section">
+        <radio-group name="zhiJiaZhongLei">
+          <label>
+            <radio value="BMS">BMS</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="DES">DES</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="可降解">可降解</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="其他">其他</radio>
+          </label>
+        </radio-group>
+
+      </view>
+    </view>
+    非罪犯血管1
+    <view class="a4">
+      <text>罪犯血管：</text>
+      <view class="section">
+
+
+        <input class="section" style="border-bottom:1px solid black" name="criminalBlood1">
+        </input>段</view>
+      <text>狭窄程度：</text>
+      <view class="section">
+        <input class="section" style="border-bottom:1px solid black" name="narrow1">
+        </input>%</view>
+      <text>造影时TIMI</text>
+      <view class="section">
+
+        <input class="section" style="border-bottom:1px solid black" name="radiographyTimi1">
+        </input>
+        级
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}">支架内血栓: &emsp;</text>
+
+        <radio-group name="zhiJiaNeiXueShuan2">
+          <label>
+            <radio value="是2">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否2">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}"> 分叉病变: &emsp;</text>
+        <radio-group name="fenChaBingBian2">
+          <label>
+            <radio value="是2">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否2">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}">CTO: &emsp;</text>
+        <radio-group name="cto2">
+          <label>
+            <radio value="是2">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否2">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}">钙化病变: &emsp;</text>
+
+        <radio-group name="gaiHuaBingBian2">
+          <label>
+            <radio value="是2">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否2">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}">PCI: &emsp;</text>
+
+        <radio-group name="pci2">
+          <label>
+            <radio value="是2">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否2">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        术中处理：</view>
+      <view class="section">
+
+        <radio-group name="shuZhongChuLi2">
+          <label>
+            <radio value="植入支架2">植入支架</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="PTCA2">PTCA</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="血栓抽吸2">血栓抽吸</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="冠脉内溶栓2">冠脉内溶栓</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="仅使用导丝2">仅使用导丝</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="其他2">其他</radio>
+          </label>
+        </radio-group>
+
+      </view>
+      <text> 术后TIMI</text>
+      <view class="section">
+
+        <input class="section" style="border-bottom:1px solid black" name="optionedTimi1">
+        </input>级
+      </view>
+      <text>植入支架</text>
+      <view class="section">
+
+        <input class="section" style="border-bottom:1px solid black" name="shelf1">
+        </input>枚
+      </view>
+
+      <view class="section">
+        支架种类：</view>
+      <view class="section">
+
+        <radio-group name="zhiJiaZhongLei2">
+          <label>
+            <radio value="BMS2">BMS</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="DES2">DES</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="可降解2">可降解</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="其他2">其他</radio>
+          </label>
+        </radio-group>
+
+      </view>
+    </view>
+    非罪犯血管2
+    <view class="a4">
+      <text>罪犯血管</text>
+      <view class="section">
+
+
+        <input class="section" style="border-bottom:1px solid black" name="criminalBlood2">
+        </input>段
+      </view>
+      <text>狭窄程度：</text>
+      <view class="section">
+
+        <input class="section" style="border-bottom:1px solid black" name="narrow2">
+        </input>%
+      </view>
+      <text>造影时TIMI</text>
+      <view class="section">
+
+        <input class="section" style="border-bottom:1px solid black" name="radiographyTimi2">
+        </input>级
+      </view>
+
+
+
+
+      <view class="section">
+        <text decode="{{true}}">支架内血栓: &emsp;</text>
+
+        <radio-group name="zhiJiaNeiXueShuan3">
+          <label>
+            <radio value="是3">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否3">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}"> 分叉病变: &emsp;</text>
+        <radio-group name="fenChaBingBian3">
+          <label>
+            <radio value="是3">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否3">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}">CTO: &emsp;</text>
+        <radio-group name="cto3">
+          <label>
+            <radio value="是3">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否3">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}">钙化病变: &emsp;</text>
+
+        <radio-group name="gaiHuaBingBian3">
+          <label>
+            <radio value="是3">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否3">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}">PCI: &emsp;</text>
+
+        <radio-group name="pci3">
+          <label>
+            <radio value="是3">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否3">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+      <view class="section">
+        术中处理：</view>
+      <view class="section">
+        <radio-group name="shuZhongChuLi3">
+          <label>
+            <radio value="植入支架3">植入支架</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="PTCA3">PTCA</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="血栓抽吸3">血栓抽吸</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="冠脉内溶栓3">冠脉内溶栓</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="仅使用导丝3">仅使用导丝</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="其他3">其他</radio>
+          </label>
+        </radio-group>
+
+      </view>
+      <text>术后TIMI</text>
+      <view class="section">
+
+        <input class="section" style="border-bottom:1px solid black" name="optionedTimi2">
+        </input>级
+      </view>
+      <text>植入支架</text>
+      <view class="section">
+
+        <input class="section" style="border-bottom:1px solid black" name="shelf2">
+        </input>枚
+      </view>
+
+      <view class="section">
+        支架种类：</view>
+      <view class="section">
+
+        <radio-group name="zhiJiaZhongLei3">
+          <label>
+            <radio value="BMS3">BMS</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="DES3">DES</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="可降解3">可降解</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="其他3">其他</radio>
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    非罪犯血管3
+    <view class="a4">
+      <text>罪犯血管</text>
+      <view class="section">
+
+
+        <input class="section" style="border-bottom:1px solid black" name="criminalBlood3">
+        </input>段</view>
+      <text>狭窄程度：</text>
+      <view class="section">
+
+        <input class="section" style="border-bottom:1px solid black" name="narrow3">
+        </input>%</view>
+      <text>造影时TIMI</text>
+      <view class="section">
+
+        <input class="section" style="border-bottom:1px solid black" name="radiographyTimi3">
+        </input>
+        级
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}">支架内血栓: &emsp;</text>
+
+        <radio-group name="zhiJiaNeiXueShuan4">
+          <label>
+            <radio value="是4">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否4">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}"> 分叉病变: &emsp;</text>
+        <radio-group name="fenChaBingBian4">
+          <label>
+            <radio value="是4">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否4">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}">CTO: &emsp;</text>
+        <radio-group name="cto4">
+          <label>
+            <radio value="是4">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否4">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}">钙化病变: &emsp;</text>
+
+        <radio-group name="gaiHuaBingBian4">
+          <label>
+            <radio value="是4">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否4">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        <text decode="{{true}}">PCI: &emsp;</text>
+
+        <radio-group name="pci4">
+          <label>
+            <radio value="是4">是</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="否">否</radio>
+          </label>
+        </radio-group>
+
+      </view>
+
+      <view class="section">
+        术中处理：</view>
+      <view class="section">
+
+        <radio-group name="shuZhongChuLi4">
+          <label>
+            <radio value="植入支架4">植入支架</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="PTCA4">PTCA</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="血栓抽吸4">血栓抽吸</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="冠脉内溶栓4">冠脉内溶栓</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="仅使用导丝4">仅使用导丝</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="其他4">其他</radio>
+          </label>
+        </radio-group>
+      </view>
+      <text>术后TIMI</text>
+      <view class="section">
+
+        <input class="section" style="border-bottom:1px solid black" name="optionedTimi3">
+        </input>级
+      </view>
+      <text>植入支架</text>
+      <view class="section">
+
+        <input class="section" style="border-bottom:1px solid black" name="shelf3">
+        </input>枚
+      </view>
+
+      <view class="section">
+        支架种类：</view>
+      <view class="section">
+
+        <radio-group name="zhiJiaZhongLei4">
+          <label>
+            <radio value="BMS4">BMS</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="DES4">DES</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="可降解4">可降解</radio>
+          </label><text decode="{{true}}"> &emsp;</text>
+          <label>
+            <radio value="其他4">其他</radio>
+          </label>
+        </radio-group>
+
+      </view>
+    </view>
+
+    <view class="section">
+      术中并发症:
+    </view>
+    <view class="section">
+
+      <radio-group name="shuZhongBingFaZheng">
+        <label>
+          <radio value="是">是</radio>
+        </label>
+        <label>
+          <radio value="否">否</radio>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <button size="mini" type="primary" form-type="submit" plain>提交数据</button>
+  <button size="mini" type="warn" form-type="reset">重置数据</button>
+</form>
+
+
+
+
+<!-- 主动脉夹层诊疗 -->
+<form bindsubmit="formSubmit11" bindreset="formReset11">
+  <view class="section"> 主动脉夹层诊疗</view>
+  <view class="a3">
+
+
+    <!-- 主动脉夹层诊疗-初步诊断时间 -->
+    <text>初步诊断时间：</text>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="firstDiagnosisTime2">
+      </input>
+    </view>
+
+    <!-- 诊疗医生 -->
+    <view class="section">
+      医生：
+      <input type="number" class="section" style="border-bottom:1px solid black" name="doctor2">
+      </input>
+    </view>
+
+    <!-- 影像学检查 -->
+    <text>影像学检查：</text>
+    <view class="section">
+
+
+      <radio-group name="yingXiangXueJianCha">
+        <label>
+          <radio value="ct" />CT</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="caiChao" />彩超</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="mri" />MRI</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="qiTa" />其他</label>
+      </radio-group>
+
+    </view>
+
+    <!-- 通知CT室时间 -->
+    <text>通知CT室时间：</text>
+    <view class="section">
+      <input type="number" class="section" style="border-bottom:1px solid black" name="informedCTTime">
+      </input>
+    </view>
+
+    <!-- 完成准备时间 -->
+    <text>完成准备：</text>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="okPrepareTime">
+      </input>
+    </view>
+
+    <!-- 开始扫描时间 -->
+    <text>开始扫描：</text>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="beginScanTime">
+      </input>
+    </view>
+
+    <!-- CT报告时间 -->
+    <text>CT报告时间：</text>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="ctReporterTime">
+      </input>
+    </view>
+
+    <!-- 通知XX会诊,通知XX时间 -->
+    <text>通知 </text>
+    <view class="section">
+      <input type="number" class="section" style="border-bottom:1px solid black" name="inform"></input>
+    </view>
+    <text>会诊：</text>
+    <view class="section">
+      <input type="number" class="section" style="border-bottom:1px solid black" name="diagnosisTime">
+      </input>
+    </view>
+
+    <!-- 会诊时间 -->
+    <text>会诊时间：</text>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="diagnosisTime2">
+      </input>
+    </view>
+
+    <!-- 夹层类型 -->
+    <view class="section">
+      夹层类型：
+
+      <radio-group name="jiaCengLeiXing">
+        <label>
+          <radio value="a">A</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="b">B</radio>
+        </label>
+      </radio-group>
+
+    </view>
+
+    <!-- 治疗策略 -->
+    <text>治疗策略：</text>
+    <view class="section">
+
+
+      <radio-group name="zhiLiaoCeLue">
+        <label>
+          <radio value="jinJiJieRU">紧急介入</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="zeQiJieRu">择期介入</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="baoShou">保守</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="waiKeShouShu">外科手术</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="qiTa">其他（介入失败转手术）</radio>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <button size="mini" type="primary" form-type="submit" plain>提交数据</button>
+  <button size="mini" type="warn" form-type="reset">重置数据</button>
+</form>
+
+<!-- 肺栓塞诊疗 -->
+<form bindsubmit="formSubmit12" bindreset="formReset12">
+  <view class="section">肺栓塞诊疗</view>
+  <view class="a3">
+    <!-- 初步诊断时间 -->
+    <view class="section">
+      <text>初步诊断时间：</text></view>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="firstDiagnosisTime3">
+      </input>
+    </view>
+    <!-- 初步诊断的医生 -->
+    <view class="section">
+      医生：
+      <input type="number" class="section" style="border-bottom:1px solid black" name="doctor3">
+      </input>
+    </view>
+
+    <!-- 影像学检查 -->
+    <text>影像学检查：</text>
+    <view class="section">
+      <radio-group name="yingXiangXueJianCha2">
+        <label>
+          <radio value="ct" />CT</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="qiTa" />其他</label>
+      </radio-group>
+
+    </view>
+
+    <!-- 通知CT室时间 -->
+    <text>通知CT室时间：</text>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="informedCTTime2">
+      </input>
+    </view>
+
+    <!-- 完成准备时间 -->
+    <text>完成准备：</text>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="okPrepareTime2">
+      </input>
+    </view>
+
+    <!-- 开始扫描时间 -->
+    <text>开始扫描：</text>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="beginScanTime2">
+      </input>
+    </view>
+
+    <!-- CT报告时间 -->
+    <text>CT报告时间：</text>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="ctReporterTime2">
+      </input>
+    </view>
+
+    <!-- 危险分层 -->
+    <text>危险分层：</text>
+    <view class="section">
+
+      <radio-group name="weiXianFenCeng">
+        <label>
+          <radio value="gaoWei">高危</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="zhongWei">中危</radio>
+        </label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="diWei">低危</radio>
+        </label>
+      </radio-group>
+
+    </view>
+
+    <!-- 开始抗凝时间 -->
+    <text>开始抗凝：</text>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="AnticoagulantsTime2">
+      </input>
+    </view>
+  </view>
+
+  <button size="mini" type="primary" form-type="submit" plain>提交数据</button>
+  <button size="mini" type="warn" form-type="reset">重置数据</button>
+</form>
+
+<!-- 其他胸痛 -->
+<form bindsubmit="formSubmit13" bindreset="formReset13">
+  <view>其他胸痛</view>
+  <view class="a3">
+
+    <radio-group name="qiTaXiongTong">
+      <label>
+        <radio value="feiACSXinYuanXingXiongTong2" />非ACS心源性胸痛</label>
+    </radio-group>
+
+    <view class="a4">
+
+      <!-- 胸痛表现 -->
+      <checkbox-group name="xiongTongBiaoXian">
+        <label>
+          <checkbox value="xinLvShiChang" />心律失常</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="kuoXinBing" />扩心病</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="queXueXingXinJiBing" />缺血性心肌病</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="feiXinBing" />肥心病</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="xinJiYan" />心肌炎</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="guanXinBing" />冠心病</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="banMoBing" />瓣膜病</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="chenJiuXingXinGeng" />陈旧性心梗</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="xinJiaoTong" />心绞痛</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="fangChan" />房颤</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="GaoXueYa" />高血压</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="xinShuai" />心衰</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="fangPu" />房扑</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="shiZao" />室早</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="shiShangSu" />室上速</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="xinBaoYan" />心包炎</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="xinBaoJiYe" />心包积液</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="xinJiQiao" />心肌桥</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="zhuDongMaiGuanBiJianXueZhong" />主动脉管壁间血肿</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="zhuDongMaiLiu" />主动脉瘤</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <checkbox value="touBiXingDongTanZhouYangYingHuaXingKuiYang" />透壁性动弹粥样硬化性溃疡</label><text decode="{{true}}">
+          &emsp;</text>
+        <label>
+          <checkbox value="zhangLiXingQiXiong" />张力性气胸</label>
+      </checkbox-group>
+
+    </view>
+
+    <!-- 其他非心源性胸痛 -->
+
+    <radio-group name="qiTaXiongTong2">
+      <label>
+        <radio value="qiTaFeiXinYuanXingXiongTong2">其他非心源性胸痛</radio>
+      </label>
+    </radio-group>
+    <!-- 其他非心源性胸痛的五种表现 -->
+    <view class="a4">
+      <radio-group name="qiTaXiongTongBiaoXian">
+        <label>
+          <radio value="huXiXiTongBing" />呼吸系统病</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="xiaoHuaXiTongBing" />消化系统病</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="shenJingXiTongBing" />神经系统病</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="jingShenXiTongBing" />精神系统病</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="jiRouGuGeBing" />肌肉骨骼病</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="piFuXiTongBing" />皮肤系统病</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="qiTa" />其他</label>
+      </radio-group>
+
+    </view>
+
+    <!-- 胸痛原因待查 -->
+    <view class="section">
+
+      <radio-group name="qiTaXiongTong3">
+        <label>
+          <radio value="daicha">待查</radio>
+        </label>
+      </radio-group>
+
+    </view>
+
+    <!-- 初步诊断时间 -->
+    <text> 初步诊断时间：</text>
+    <view class="section">
+
+      <input type="number" class="section" style="border-bottom:1px solid black" name="firstDiagnosisTime4">
+      </input>
+    </view>
+    <!-- 诊断医生 -->
+    <view class="section">
+      医生：
+      <input type="text" class="section" style="border-bottom:1px solid black" name="doctor4">
+      </input>
+    </view>
+
+    <!-- 处理措施 -->
+    <text>处理措施：</text>
+    <view class="section">
+
+      <radio-group name="chuLiCuoShi">
+        <label>
+          <radio value="" />收治入院</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="" />急诊留观</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="" />门诊治疗</label><text decode="{{true}}"> &emsp;</text>
+        <label>
+          <radio value="" />随访</label>
+      </radio-group>
+
+    </view>
+    <text>患者情况备注：</text>
+    <view class="section">
+
+      <textarea bindblur="bindTextAreaBlur">
+
+      </textarea></view>
+  </view>
+  <text>患者情况备注：</text>
+  <view class="section">
+    <textarea bindblur="bindTextAreaBlur">
+
+  </textarea>
+  </view>
+  <button size="mini" type="primary" form-type="submit" plain>提交数据</button>
+  <button size="mini" type="warn" form-type="reset">重置数据</button>
+</form>
+<navigator url="/pages/web3/web3"> <button size="mini" disabled="{{disabled}}">跳转到下一页</button></navigator>
+<navigator url="/pages/web1/web1" open-type="switchTab"> <button size="mini" disabled="{{disabled}}">跳转到上一页</button></navigator>

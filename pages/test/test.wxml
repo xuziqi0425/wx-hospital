@@ -1,0 +1,19 @@
+<view>
+  <i-button bindtap="fold" size="large" type="success" shape="circle">信息</i-button>
+  <view>
+      <view wx:if="{{isfold}}">
+      <i-icon type="accessory" />
+    <i-button bindtap="fold" size="small" class="btn1" >信息1</i-button>
+
+      </view>
+      <view wx:if="{{isfold}}">
+    <i-button bindtap="fold" size="small" >信息2</i-button>
+      </view>
+      <view wx:if="{{isfold}}">
+    <i-button bindtap="fold" size="small" >信息3</i-button>
+      </view>
+  </view>
+
+
+  </view>
+

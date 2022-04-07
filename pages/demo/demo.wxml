@@ -1,0 +1,30 @@
+
+<view class="a2">
+  <button bindtap="myTap7" data-id="jiBenXinXi">基本信息</button>
+  <view wx:if="{{isShow11}}">
+    <form bindsubmit="formSubmit1" bindreset="formReset1">
+
+    <view class="a1">胸痛中心患者信息采集平台</view>
+    <view class="b">姓名：</view>
+    <input name="name" class="ipt1" type="text"></input>
+    <view>
+      <view class="b">性别：</view>
+      <radio-group name="gender">
+        <label>
+          <radio value="男" /><text decode="{{true}}">男 &emsp;</text></label>
+        <label>
+          <radio value="女" /><text decode="{{true}}">女&emsp;</text></label>
+      </radio-group>
+
+      <view class="b">年龄:</view>
+      <input name="age" class="ipt1"></input>
+      <view class="b">住院(门诊)号：</view>
+      <input name="zhuyuanhao" class="ipt1" type="number"></input>
+      <view class="b">身份证号：</view>
+      <input name="id" class="ipt1" type="number"></input>
+      <button size="mini" type="primary" form-type="submit" plain="true"><text>提交数据</text></button>
+      <button size="mini" type="warn" form-type="reset" plain="true"><text>重置数据</text></button>
+    </view>
+    </form>
+  </view>
+</view>

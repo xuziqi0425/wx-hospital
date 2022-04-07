@@ -1,0 +1,53 @@
+.ac {
+  text-align: center;
+  background: black;
+  color: white;
+}
+
+
+.a2c {
+  border: 2px solid lightgrey;
+  margin: 5px 5px;
+}
+
+.a3c {
+  border: 2px solid lightgrey;
+  margin: 5px 5px;
+  border-style: dotted;
+}
+
+.a4c {
+  border: 1px solid lightgray;
+  margin: 5px 5px;
+}
+
+
+.tablec {
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.trc {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.thc {
+  font-size: 14px;
+}
+
+.thc,
+.tdc {
+  padding: 8px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.sectionc {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}

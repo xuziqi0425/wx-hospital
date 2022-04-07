@@ -1,0 +1,751 @@
+<navigator open-type="switchTab" url="/pages/web1/web1"><button size='mini' disabled='{{disabled}}'>跳转到首页</button>
+</navigator>
+<navigator url="/pages/web2/web2"><button size='mini' disabled='{{disabled}}'>跳转到上一页</button></navigator>
+<view >
+  <i-button bindtap="fold" size="large" type="Info" ><i-icon  type="activity" size="28" color="	#FF4500" />表单3</i-button>
+ <view wx:if="{{isfold3}}" class="a2c" >
+
+ </view>
+ <view wx:if="{{isfold3}}" class="a2c" >
+
+</view>
+<view wx:if="{{isfold3}}" class="a2c" >
+
+</view>
+<view wx:if="{{isfold3}}" class="a2c" >
+
+</view>               
+
+  </view>
+
+
+
+<view>
+  <view class="ac">患者转归</view>
+
+  <!-- 出院诊断 -->
+  <form bindsubmit="formSubmit1c" bindreset="formReset1c">
+
+    <view class="a2c">
+      出院诊断
+
+      <!-- 几种胸痛 -->
+      <view class="a3c">
+
+        <checkbox-group name="xiongTong">
+          <label>
+            <checkbox value="stemi" />STEMI</label>
+          <label>
+            <checkbox value="nstemi" />NSTEMI</label>
+          <label>
+            <checkbox value="ua" />UA</label>
+          <label>
+            <checkbox value="zhuDongMaiJiaCeng" /><text>主动脉夹层\n</text></label>
+          <label>
+            <checkbox value="feiDongMaiShuanSai" />肺动脉栓塞</label>
+
+        </checkbox-group>
+
+      </view>
+      <view class="a2c">
+
+        <radio-group name="xinYuanXingXiongTong">
+          <label>
+            <radio value="feiACSXinYuanXingXiongTong" />非ACS心源性胸痛</label>
+        </radio-group>
+
+        <view class="a3c">
+          <checkbox-group name="xiongTongBiaoXian">
+            <label>
+              <checkbox value="xinLvShiChang" />心律失常</label>
+            <label>
+              <checkbox value="kuoXinBing" />扩心病</label>
+            <label>
+              <checkbox value="queXueXingXinJiBing" />缺血性心肌病</label>
+            <label>
+              <checkbox value="feiXinBing" />肥心病</label>
+            <label>
+              <checkbox value="xinJiYan" />心肌炎</label>
+            <label>
+              <checkbox value="guanXinBing" />冠心病</label>
+            <label>
+              <checkbox value="banMoBing" />瓣膜病</label>
+            <label>
+              <checkbox value="chenJiuXingXinGeng" />陈旧性心梗</label>
+            <label>
+              <checkbox value="xinJiaoTong" />心绞痛</label>
+            <label>
+              <checkbox value="fangChan" />房颤</label>
+            <label>
+              <checkbox value="GaoXueYa" />高血压</label>
+            <label>
+              <checkbox value="xinShuai" />心衰</label>
+            <label>
+              <checkbox value="fangPu" />房扑</label>
+            <label>
+              <checkbox value="shiZao" />室早</label>
+            <label>
+              <checkbox value="shiShangSu" />室上速</label>
+            <label>
+              <checkbox value="xinBaoYan" />心包炎</label>
+            <label>
+              <checkbox value="xinBaoJiYe" />心包积液</label>
+            <label>
+              <checkbox value="xinJiQiao" />心肌桥</label>
+            <label>
+              <checkbox value="zhuDongMaiGuanBiJianXueZhong" />主动脉管壁间血肿</label>
+            <label>
+              <checkbox value="zhuDongMaiLiu" />主动脉瘤</label>
+            <label>
+              <checkbox value="touBiXingDongTanZhouYangYingHuaXingKuiYang" />透壁性动弹粥样硬化性溃疡</label>
+            <label>
+              <checkbox value="zhangLiXingQiXiong" />张力性气胸</label>
+
+          </checkbox-group>
+
+        </view>
+      </view>
+
+      <view class="a2c">
+
+        <radio-group name="qiTaXinYuanXingXiongTong">
+          <label>
+            <radio value="qiTaFeiACSXinYuanXingXiongTong">其他非心源性胸痛</radio>
+          </label>
+        </radio-group>
+
+        <view class="a3c">
+
+          <radio-group name="qiTaBiaoXian">
+            <label>
+              <radio value="huXiXiTongBing" />呼吸系统病</label>
+            <label>
+              <radio value="xiaoHuaXiTongBing" />消化系统病</label>
+            <label>
+              <radio value="shenJingXiTongBing" />神经系统病</label>
+            <label>
+              <radio value="jingShenXiTongBing" />精神系统病</label>
+            <label>
+              <radio value="jiRouGuGeBing" />肌肉骨骼病</label>
+            <label>
+              <radio value="piFuXiTongBing" />皮肤系统病</label>
+            <label>
+              <radio value="qiTa" />其他</label>
+          </radio-group>
+
+        </view>
+      </view>
+
+    </view>
+
+    <!-- 确诊时间、住院天数、总费用 -->
+    <view class="a2c">
+      <!-- 确诊时间 -->
+      <view class="sectionc">
+        确诊时间：
+        <input type="number" class="sectionc" style="border-bottom:1px solid black" name="diagnosisTime">
+        </input>
+      </view>
+
+      <!-- 住院天数 -->
+      <view class="sectionc">
+        住院天数：
+        <input type="number" class="sectionc" style="border-bottom:1px solid black" name="inHospitalDay">
+        </input>天
+      </view>
+
+      <!-- 总费用 -->
+      <view class="sectionc">
+        总费用：
+        <input type="number" class="sectionc" style="border-bottom:1px solid black" name="allCost">
+        </input>元
+      </view>
+    </view>
+
+    <button size="mini" type="primary" form-type="submit" plain="true">提交数据</button>
+    <button size="mini" type="warn" form-type="reset" plain="true">重置数据</button>
+  </form>
+
+  <!-- 患者转归 -->
+  <form bindsubmit="formSubmit2c" bindreset="formReset2c">
+    <view class="a2c">
+      患者转归
+      <view class="a3c">
+
+        <radio-group name="zhuanGuiLeiXing">
+          <label>
+            <radio value="chuYuan">出院</radio>
+          </label>
+        </radio-group>
+
+        <!-- 出院时间 -->
+        <view class="sectionc">
+          出院时间：
+          <input type="number" class="sectionc" style="border-bottom:1px solid black" name="leftHospitalTime">
+          </input>
+        </view>
+
+        <!-- 治疗结果 -->
+        <view class="a4c">
+          治疗结果：
+
+          <radio-group name="zhiLiaoJieGuo">
+            <label>
+              <radio value="zhiYu" />治愈</label>
+            <label>
+              <radio value="haoZhuan" />好转</label>
+            <label>
+              <radio value="ziDongLiYuan" /><text>自动离院\n</text></label>
+            <label>
+              <radio value="qiTaYuanYinLiYuan" />其他原因离院</label>
+          </radio-group>
+
+        </view>
+      </view>
+
+      <view class="a3c">
+
+        <radio-group name="zhuanGuiLeiXing2">
+          <label>
+            <radio value="zhuanYuan">转院</radio>
+          </label>
+        </radio-group>
+
+        <!-- 离开本院大门时间 -->
+        <view class="sectionc">
+          离开本院大门时间：
+          <input type="number" class="sectionc" style="border-bottom:1px solid black" name="leftHospitalGateTime">
+          </input>
+        </view>
+
+        <!-- 医院名称 -->
+        <view>
+          医院名称：
+          <input class="sectionc" style="border-bottom:1px solid black" name="hospitalName">
+          </input>
+        </view>
+
+        <!-- 转运PCI -->
+        <view class="a4c">
+          转运PCI：
+          <radio-group name="shiFouZhuanYunPCI">
+            <label>
+              <radio value="shi" />是</label>
+            <label>
+              <radio value="fou" />否</label>
+          </radio-group>
+        </view>
+
+        <!-- 远程心电图 -->
+        <view class="a4c">
+          远程心电图传输：
+          <radio-group name="shiFouYuanChengXinDianTu">
+            <label>
+              <radio value="shi" />是</label>
+            <label>
+              <radio value="fou" />否</label>
+          </radio-group>
+        </view>
+
+      </view>
+
+      <view class="a3c">
+
+        <radio-group name="zhuanGuiLeiXing3">
+          <label>
+            <radio value="zhuanKe">转科</radio>
+          </label>
+        </radio-group>
+
+        <!-- 转科时间 -->
+        <view class="sectionc">
+          转科时间：
+          <input type="number" class="sectionc" style="border-bottom:1px solid black" name="turnDeapartmentTime">
+          </input>
+        </view>
+
+        <!-- 接诊科室 -->
+        <view>
+          接诊科室：
+          <input class="sectionc" style="border-bottom:1px solid black" name="cureInDepartment">
+          </input>
+        </view>
+
+        <!-- 转科原因 -->
+        <view>
+          转科原因：
+          <input class="sectionc" style="border-bottom:1px solid black" name="turnDeapartmentReason">
+          </input>
+        </view>
+
+      </view>
+
+      <view class="a3c">
+
+        <radio-group name="zhuanGuiLeiXing4">
+          <label>
+            <radio value="siWang">死亡</radio>
+          </label>
+        </radio-group>
+
+        <!-- 死亡时间 -->
+        <view class="sectionc">
+          死亡时间：
+          <input class="sectionc" style="border-bottom:1px solid black" name="dieTime">
+          </input>
+        </view>
+
+        <!-- 死亡原因 -->
+        <view>
+          死亡原因：
+          <input class="sectionc" style="border-bottom:1px solid black" name="dieReason">
+          </input>
+        </view>
+
+      </view>
+
+    </view>
+
+
+    <view class="a2c">
+
+      离院宣教
+
+      <view class="a2c">
+
+        <checkbox-group name="liYuanXuanJiao">
+          <label>
+            <checkbox value="jieYan" />戒烟</label>
+          <label>
+            <checkbox value="guiLvYongYao" />规律用药</label>
+          <label>
+            <checkbox value="suiFangZhiLiao" />随访治疗</label>
+          <label>
+            <checkbox value="shengHuoQiJuTiaoHu" /><text>生活起居调护\n</text></label>
+          <label>
+            <checkbox value="xinXueGuanWeiXianYinSuKongZhi" />心血管危险因素控制</label>
+          <label>
+            <checkbox value="weiXuanJiao" />未宣教</label>
+        </checkbox-group>
+
+      </view>
+
+      <view class="a2c">
+
+        COCID-19:
+
+        <radio-group name="cocid19">
+          <label>
+            <radio value="shaiChaHouPaiChu" />经筛查后排除</label>
+          <label>
+            <radio value="shaiChaHouQueZhen" />经筛查后确诊</label>
+          <label>
+            <radio value="weiShaiCha" /><text>未筛查\n</text></label>
+        </radio-group>
+
+        患者情况备注:
+        <textarea bindblur="bindTextAreaBlur"></textarea>
+
+      </view>
+    </view>
+
+    <button size="mini" type="primary" form-type="submit" plain>提交数据</button>
+    <button size="mini" type="warn" form-type="reset" plain>重置数据</button>
+  </form>
+
+  <!-- 住院期间用药 -->
+  <form bindsubmit="formSubmit3c" bindreset="formReset3c">
+    <view class="a2c">
+      住院期间用药
+
+      <!-- 降糖药 -->
+      <view class="a3c">
+        降糖药
+        <view>
+
+          <checkbox-group name="jiangTangYao">
+            <label>
+              <checkbox value="wu" />无</label>
+            <label>
+              <checkbox value="huangNiaoLei" />磺脲类</label>
+            <label>
+              <checkbox value="shuangGuaLei" />双胍类</label>
+            <label>
+              <checkbox value="aTangGanMei" />a糖苷酶抑制剂</label>
+            <label>
+              <checkbox value="dpp-4" />DPP-4抑制剂</label>
+            <label>
+              <checkbox value="glp-1" />GLP-1受体激动剂</label>
+            <label>
+              <checkbox value="sclt-2" />SCLT-2抑制剂</label>
+            <label>
+              <checkbox value="yiDaoSuLei" />胰岛素及胰岛素类似物</label>
+            <label>
+              <checkbox value="qiTa" />其他</label>
+          </checkbox-group>
+
+        </view>
+      </view>
+
+      <!-- 口服抗凝药 -->
+      <view class="a3c">
+        口服抗凝药
+        <view>
+
+          <checkbox-group name="kouFuKangNingYao">
+            <label>
+              <checkbox value="wu" />无</label>
+            <label>
+              <checkbox value="huaFaLin" />华法林</label>
+            <label>
+              <checkbox value="daBiJiaQun" />达比加群</label>
+            <label>
+              <checkbox value="liFaShaBan" />利伐沙班</label>
+            <label>
+              <checkbox value="aPaiShaBan" />阿哌沙班</label>
+            <label>
+              <checkbox value="qiTa" />其他</label>
+          </checkbox-group>
+
+        </view>
+      </view>
+
+      <!-- pcsk9 -->
+      <view class="a3c">
+        PCSK9
+        <view>
+
+          <checkbox-group name="pcsk9">
+            <label>
+              <checkbox value="wu" />无</label>
+            <label>
+              <checkbox value="aLiXiYouDanKang" />阿利西尤单抗</label>
+            <label>
+              <checkbox value="yiLuoYouDanKang" />依洛尤单抗</label>
+          </checkbox-group>
+
+
+          <view class="a4 sectionc">
+            单次剂量
+            <input class="sectionc" style="border-bottom:1px solid black" name="dose">
+            </input>mg
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+    <button size="mini" type="primary" form-type="submit" plain>提交数据</button>
+    <button size="mini" type="warn" form-type="reset" plain>重置数据</button>
+  </form>
+
+  <!-- ACS患者 -->
+  <form bindsubmit="formSubmit4c" bindreset="formReset4c">
+    <view class="a2c">
+      ACS患者
+
+      <!-- 院内新发心衰 -->
+      院内新发心衰：
+      <view>
+
+        <radio-group name="xinFaXinShuai">
+          <label>
+            <radio value="fou" />否</label>
+          <label>
+            <radio value="1" />I</label>
+          <label>
+            <radio value="2" />II</label>
+          <label>
+            <radio value="3" />III</label>
+          <label>
+            <radio value="4" />IV</label>
+        </radio-group>
+
+        <!-- ARNI -->
+        <view class="a4c">
+          ARNI：
+
+          <radio-group name="arni">
+            <label>
+              <radio value="shi">是</radio>
+            </label>
+            <label>
+              <radio value="fou">否</radio>
+            </label>
+          </radio-group>
+
+          <view class="sectionc">用法用量：
+            <input style="border-bottom:1px solid black"></input>
+          </view>
+
+        </view>
+
+      </view>
+
+      <!-- 住院期间并发症 -->
+      <view class="a3c">
+
+        住院期间并发症
+        <view>
+
+          <checkbox-group name="zhuYuanQiJianBingFaZheng">
+            <label>
+              <radio value="xiuKe" />休克</label>
+            <label>
+              <radio value="jiXieXingBingFaZheng" />机械性并发症</label>
+            <label>
+              <radio value="ganRan" />感染</label>
+            <label>
+              <radio value="zaiFaXinGeng" />再发心梗</label>
+            <label>
+              <radio value="xueShuan" />血栓</label>
+            <label>
+              <radio value="queXueXingZuZhong" />缺血性卒中</label>
+            <label>
+              <radio value="tia" />TIA</label>
+            <label>
+              <radio value="chuXue" />出血</label>
+            <label>
+              <radio value="eXingXinLvShiChang" />恶行心律失常</label>
+            <label>
+              <radio value="huShuai" />呼衰</label>
+            <label>
+              <radio value="shenShuai" />肾衰</label>
+            <label>
+              <radio value="siWang" />死亡</label>
+            <label>
+              <radio value="wu" />无</label>
+          </checkbox-group>
+
+        </view>
+
+      </view>
+
+      <!-- 危险因素 -->
+      <view class="a3c">
+        危险因素
+        <view>
+
+          <checkbox-group name="weiXianYinSu">
+            <label>
+              <checkbox value="gaoXueYa" />高血压</label>
+            <label>
+              <checkbox value="gaoZhiXueYa" />高脂血压</label>
+            <label>
+              <checkbox value="tangNiaoBing" />糖尿病</label>
+            <label>
+              <checkbox value="yiJieYan" />已戒烟</label>
+            <label>
+              <checkbox value="dangQianRengXiYan" />当前仍吸烟</label>
+            <label>
+              <checkbox value="feiPang" />肥胖</label>
+            <label>
+              <checkbox value="cvdJiaZuShi" />早发CVD家族史</label>
+          </checkbox-group>
+
+        </view>
+      </view>
+
+      <!-- 合并疾病 -->
+      <view class="a3c">
+
+        合并疾病
+        <view>
+
+          <checkbox-group name="heBingJiBing">
+            <label>
+              <checkbox value="xinZangBanMoBing" />心脏瓣膜病</label>
+            <label>
+              <checkbox value="queXueXingNaoXueGuanBing" />缺血性脑血管病</label>
+            <label>
+              <checkbox value="chuXueXingNaoXueGuanBing" />出血性脑血管病</label>
+            <label>
+              <checkbox value="waiZhouDongMaiJiBing" />外周动脉疾病</label>
+            <label>
+              <checkbox value="zhuDongMaiLiu" />主动脉瘤</label>
+            <label>
+              <checkbox value="copd" />COPD</label>
+            <label>
+              <checkbox value="manXingShenBing" />慢性肾病</label>
+            <label>
+              <checkbox value="pinXue" />贫血</label>
+            <label>
+              <checkbox value="xiaoHuaXingKuiYang" />消化性溃疡</label>
+            <label>
+              <checkbox value="jiaGongYiChang" />甲功异常</label>
+            <label>
+              <checkbox value="eXingZhongLiu" />恶行肿瘤</label>
+            <label>
+              <checkbox value="youGuanXinBingXueYunChongJianShi" />有冠心病血运重建史</label>
+            <label>
+              <checkbox value="wuGuanXinBingXueYunChongJianShi" />无冠心病血运重建史</label>
+            <label>
+              <checkbox value="zhenFaXingFangChan" />阵发性房颤</label>
+            <label>
+              <checkbox value="chiXuXingFangChan" />持续性房颤</label>
+            <label>
+              <checkbox value="changChiXuXingFangChan" />长程持续性房颤</label>
+            <label>
+              <checkbox value="yongJiuXingFangChan" />永久性房颤</label>
+            <label>
+              <checkbox value="yiJiManXingXinShuai" />I级慢性心衰</label>
+            <label>
+              <checkbox value="erJiManXingXinShuai" />II级慢性心衰</label>
+            <label>
+              <checkbox value="sanJiManXingXinShuai" />III级慢性心衰</label>
+            <label>
+              <checkbox value="siJiManXingXinShuai" />IV级慢性心衰</label>
+          </checkbox-group>
+
+        </view>
+
+      </view>
+
+      <!-- 检查结果 -->
+      <view class="a3c">
+        检查结果
+        <view class="a4c">
+
+          <!-- 72h内肌钙蛋白最高值 -->
+          <view>
+            <radio-group name="jianChaJieGuo">
+              <label>
+                <radio value="72Hours" />72小时内肌钙蛋白最高值：</label>
+            </radio-group>
+            <input bindinput="iptName" type="number" class="sectionc" style="border-bottom:1px solid black"
+              name="jiGaiDanbai">
+            </input>
+          </view>
+
+          <!-- BNP最高值 -->
+          <view>
+            <radio-group name="jianChaJieGuo2">
+              <label>
+                <radio value="bnpZuiGaoZhi" />BNP最高值：</label>
+            </radio-group>
+            <input bindinput="iptName" type="number" class="sectionc" style="border-bottom:1px solid black"
+              name="bnpZuiGaoZhi2">
+            </input>pg/ml
+          </view>
+
+          <!-- NT-proBNP最高值 -->
+          <view>
+            <radio-group name="jianChaJieGuo3">
+              <label>
+                <radio value="nt-probnp" />NT-proBNP最高值：</label>
+            </radio-group>
+            <input bindinput="iptName" type="number" class="sectionc" style="border-bottom:1px solid black"
+              name="ntproBNP">
+            </input>mmol/L
+          </view>
+
+          <!-- TC -->
+          <view>
+            <radio-group name="jianChaJieGuo4">
+              <label>
+                <radio value="tc" />TC：</label>
+            </radio-group>
+            <input bindinput="iptName" type="number" class="sectionc" style="border-bottom:1px solid black"
+              name="tcZuiGaoZhi">
+            </input>mmol/L
+          </view>
+
+          <!-- TG -->
+          <view>
+            <radio-group name="jianChaJieGuo5">
+              <label>
+                <radio value="tg" />TG：</label>
+            </radio-group>
+            <input bindinput="iptName" type="number" class="sectionc" style="border-bottom:1px solid black"
+              name="tgZuiGaoZhi">
+            </input>mmol/L
+          </view>
+
+          <!-- HDL-C -->
+          <view>
+            <radio-group name="jianChaJieGuo6">
+              <label>
+                <radio value="hdl-c" />HDL-C:</label>
+            </radio-group>
+            <input bindinput="iptName" type="number" class="sectionc" style="border-bottom:1px solid black"
+              name="hdlcZuiGaoZhi">
+            </input>mmol/L
+          </view>
+
+          <!-- LDL-C -->
+          <view>
+            <radio-group name="jianChaJieGuo7">
+              <label>
+                <radio value="ldl-c" />LDL-C</label>
+            </radio-group>
+            <input bindinput="iptName" type="number" class="sectionc" style="border-bottom:1px solid black"
+              name="ldlcZuiGaoZhi">
+            </input>mmol/L
+          </view>
+
+          <!-- 超声LVEF最低值 -->
+          <view>
+            <radio-group name="jianChaJieGuo8">
+              <label>
+                <radio value="lvef" />超声LVEF最低值：</label>
+            </radio-group>
+            <input bindinput="iptName" type="number" class="sectionc" style="border-bottom:1px solid black"
+              name="lvefZuiDiZHi">
+            </input>(诊疗中)
+          </view>
+
+          <!-- 室壁瘤 -->
+          <radio-group name="jianChaJieGuo9">
+            <label>
+              <radio value="shiBiLiu" />室壁瘤</label>
+          </radio-group>
+
+          <!-- 局部室壁活动异常 -->
+          <radio-group name="jianChaJieGuo10">
+            <label>
+              <radio value="juBuShiBiHuoDongYiChang" />局部室壁活动异常</label>
+          </radio-group>
+
+        </view>
+      </view>
+
+      <!-- 出院带药 -->
+      <view class="a3c">
+        出院带药（仍在住院患者填写第30天时的用药
+        <view class="tablec">
+          <view class="trc">
+            <view class="thc">药物种类</view>
+            <view class="thc">药物名称及用法用量（未服用则不填）</view>
+          </view>
+          <view class="trc">
+            <view class="tdc">抗血小板药物</view>
+            <view class="tdc" name="yaoWu1"><input></input></view>
+          </view>
+          <view class="trc">
+            <view class="tdc">ACEI/ARB</view>
+            <view class="tdc" name="yaoWu1"><input></input></view>
+          </view>
+          <view class="trc">
+            <view class="tdc">调脂药物</view>
+            <view class="tdc" name="yaoWu1"><input></input></view>
+          </view>
+          <view class="trc">
+            <view class="tdc">β受体阻滞剂</view>
+            <view class="tdc" name="yaoWu1"><input></input></view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+    患者情况备注
+    <textarea bindblur="bindTextAreaBlur">
+  </textarea>
+    <button size="mini" type="primary" form-type="submit" plain>提交数据</button>
+    <button size="mini" type="warn" form-type="reset" plain>重置数据</button>
+  </form>
+</view>
+
+<navigator open-type="switchTab" url="/pages/web1/web1"><button size='mini' disabled='{{disabled}}'>跳转到首页</button>
+</navigator>
+<navigator url="/pages/web2/web2"><button size='mini' disabled='{{disabled}}'>跳转到上一页</button></navigator>

@@ -1,0 +1,417 @@
+
+<view class="a1">胸痛患者信息采集平台</view>
+<view class="content">
+	<image class='background' src="../../images/bg.jpg" mode="aspectFill"></image>
+</view>
+<!-- 患者基本信息 -->
+<view class="a1">患者基本信息</view>
+<view class="a">
+  <view class="a2">姓名：{{name}}</view>
+  <view class="a2">性别：{{gender}}</view>
+  <view class="a2">年龄:{{age}}</view>
+  <view class="a2">住院(门诊)号：{{zhuyuanhao}}</view>
+  <view class="a2">身份证号：{{id}}</view>
+</view>
+<view class="a1">急救基本信息</view>
+<!-- 急救基本信息 -->
+<view class="a">
+  <view class="a2 ">发病时间：{{fabingshijian}}</view>
+  <view class="a2 ">发病地址：{{fabingdizhi}}</view>
+  <view class="a2 ">电话：{{phone}}</view>
+</view>
+<view class="a1">转院方式：呼叫120</view>
+<!-- 呼叫120 -->
+<view class="a">
+  <view class="a2 ">出车单位：{{Chuchedanwei}}</view>
+  <view class="a2 ">呼救时间：{{CallTime}}</view>
+  <view class="a2 ">首次医疗接触时间：{{FirstyiliaoTime}}</view>
+  <view class="a2 ">是否直接转送上级医院：{{Zhijiezhuansongshangji}}</view>
+  <view class="a2 ">若直接转送上级医院，是否直达导管室：{{Zhidadaoguanshi}}</view>
+  <view class="a2 ">到达医院大门时间：{{DaodayiyuandamenTime}}</view>
+  <view class="a2 ">院内首诊医生接诊时间：{{YuanneishouzhenTime}}</view>
+  <view class="a2 ">医护人员：{{Yihu}}</view>
+</view>
+<view class="a1">转院方式：转院</view>
+<!-- 转院 -->
+<view class="a">
+  <view class="a2">转院类型：{{ZhuanyuanType}}</view>
+  <view class="a2">医院名称：{{Hname}}</view>
+  <view class="a2">首次医疗接触时间:{{FirstyiliaoTime}}</view>
+  <view class="a2">是否直接转送上级医院：{{Zhijiezhuansongshangji}}</view>
+  <view class="a2">若直接转送上级医院，是否直达导管室：{{Zhidadaoguanshi}}</view>
+  <view class="a2">转出医院入门时间：{{RumenTime}}</view>
+  <view class="a2">决定转院时间：{{JuedingzhuanyuanTime}}</view>
+  <view class="a2">转出医院出门时间：{{ChumenTime}}</view>
+  <view class="a2">到达医院大门时间:{{DaodayiyuandamenTime}}</view>
+  <view class="a2">院内接诊时间：{{YuanneishouzhenTime}}</view>
+  <view class="a2">医护人员：{{Yihu}}</view>
+</view>
+<view class="a1">转院方式：自行来院</view>
+<!-- 自行来院 -->
+<view class="a">
+  <view class="a2">到达医院大门时间:{{DaodayiyuandamenTime}}</view>
+  <view class="a2 ">首次医疗接触时间：{{FirstyiliaoTime}}</view>
+  <view class="a2 ">院内首诊医生接诊时间：{{YuanneishouzhenTime}}</view>
+  <view class="a2 ">医护人员：{{Yihu}}</view>
+</view>
+<view class="a1">转院方式：院内发病</view>
+<!-- 院内发病 -->
+<view class="a">
+  <view class="a2">到达医院大门时间:{{Fabingdizhi}}</view>
+  <view class="a2 ">首次医疗接触时间：{{BenciFirstyiliaoTime}}</view>
+  <view class="a2 ">院内首诊医生接诊时间：{{LikaixinchangTime}}</view>
+  <view class="a2 ">医护人员：{{BenciFirstyiliaorenyuan}}</view>
+</view>
+<view class="a1">病情估计</view>
+<!-- 病情估计 -->
+<view class="a">
+  <view class="a2">填写人：{{Recorder}}</view>
+  <view class="a2">三选一:{{bingQing}}</view>
+  <view class="a2 ">多选:{{checkbox}}</view>
+  <view class="a2 ">其他情况描述：{{other}}</view>
+</view>
+<view class="a1">生命体征</view>
+<!-- 生命体征 -->
+<view class="a">
+  <view class="a2">填写人：{{fillIn2}}</view>
+  <view class="a2">呼吸:{{huXi}}次/分</view>
+  <view class="a2 ">脉搏:{{maiBo}}次/分</view>
+  <view class="a2 ">心率：{{xinLv}}次/分</view>
+  <view class="a2">低压:{{diYa}}mmHg</view>
+  <view class="a2 ">高压:{{gaoYa}}mmHg</view>
+  <view class="a2 ">体温：{{tiWen}}℃</view>
+</view>
+<view class="a1">溶栓治疗</view>
+<!-- 溶栓治疗 -->
+<view class="a">
+  <view class="a2">填写人：{{fillIn3}}</view>
+  <view class="a2">是否筛查:{{shaicha}}</view>
+  <view class="a2 ">溶栓了吗:{{RongShuan}}</view>
+  <view class="a2 ">有无禁忌症：{{jinJiZheng}}</view>
+  <view class="a2">是否直达溶栓场所:{{shiFouZhiDaRongShuanChangSuo}}</view>
+  <view class="a2 ">溶栓场所:{{rongShuanChangSuo}}mmHg</view>
+  <view class="a2">开始知情同意时间：{{beginLearnTime}}</view>
+  <view class="a2 ">签署知情同意时间：{{signLearnTime}}</view>
+  <view class="a2">开始溶栓时间：{{beginCureTime}}</view>
+  <view class="a2">溶栓结束时间:{{overCureTime}}</view>
+  <view class="a2 ">溶栓药物:{{yaoWu}}</view>
+  <view class="a2 ">剂量：{{jiLiang}}</view>
+  <view class="a2">是否溶栓再通：{{rongShuanZaiTong}}</view>
+  <view class="a2">溶栓后造影时间:{{beginZaoYingTime}}</view>
+  <view class="a2 ">是否溶栓再通:{{rongShuanZaiTong2}}</view>
+  <view class="a2 ">补救PCI：{{buJiuPCI}}</view>
+  <view class="a2">决定手术时间：{{decideOperateTime}}</view>
+  <view class="a2 ">实际手术时间：{{OperateTime}}</view>
+  <view class="a2">是否补救PCI：{{buBuJiuPCI}}</view>
+</view>
+<!-- 心电图 -->
+<!-- <view class="a">
+
+  <view class="a2">填写人：{{fillIn}}</view>
+  <view class="a2">无心电图：{{xinDianTu}}</view>
+  <view class="a2">未获得原因：{{noReason}}</view>
+  <view class="a2">有心电图：{{youXinDianTu}}</view>
+  <view class="a2">首份心电图时间：{{firstMapTime}}</view>
+  <view class="a2">心电图诊断时间：{{mapDiagnosisTime}}</view>
+  <view class="a2">远程心电图传输：{{yuanChengXinDianTu}}</view>
+  <view class="a2">心电图传输时间：{{acceptTime}}</view>
+  <view class="a2">心电图传输方式：{{chuanShuFangShi}}</view>
+  <view class="a2">远程心电图传输2：{{yuanChengXinDianTu2}}</view>
+</view> -->
+<!-- 实验室检查 -->
+<!-- <view class="a">
+  <view class="a2">填写人：{{fillIn2}}</view>
+  <view class="a2">肌钙蛋白：{{jiGaiDanBai}}</view>
+  <view class="a2">肌钙蛋白类型：{{jiGaiDanBaiLeiXing}}</view>
+  <view class="a2">肌钙蛋白数值：{{number}}</view>
+  <view class="a2">肌钙蛋白性质：{{jiGaiDanBaiYinYangXing}}</view>
+  <view class="a2">抽血完成时间：{{drawBloodOkTime}}</view>
+  <view class="a2">获得报告时间：{{getReporterTime}}</view>
+  <view class="a2">肌钙蛋白2：{{jiGaiDanBai2}}</view>
+  <view class="a2">肌酐：{{jiGan}}</view>
+  <view class="a2">肌酐数值：{{jigan}}umol/l</view>
+  <view class="a2">二聚体：{{erJuTi}}</view>
+  <view class="a2">二聚体数值：{{erjuti}}mg/L</view>
+  <view class="a2">BNP:{{bNP}}</view>
+  <view class="a2">BNP数值：{{bnp}}pg/ml</view>
+  <view class="a2">NT-proBNP:{{ntprobnp}}</view>
+  <view class="a2">NT-proBNP数值：{{nt_probnp}}pg/ml</view>
+  <view class="a2">MYO：{{mYO}}</view>
+  <view class="a2">MYO数值：{{myo}}ng/ml</view>
+  <view class="a2">CKNB：{{ckNB}}</view>
+  <view class="a2">CKNB数值：{{cknb}}</view>
+</view> -->
+<!-- 心内会诊 -->
+<!-- <view class="a">
+  <view class="a2">填写人：{{fillIn3}}</view>
+  <view class="a2">是否心内会诊：{{shiFouXinNeiHuiZhen}}</view>
+  <view class="a2">心内会诊方式：{{huiZhenFangShi}}</view>
+  <view class="a2">会诊通知时间：{{informConsultationTime}}</view>
+  <view class="a2">会诊时间：{{consultationTime}}</view>
+  <view class="a2">是否心内会诊2：{{shiFouXinNeiHuiZhen2}}</view>
+</view> -->
+<!-- 诊断 -->
+<!-- <view class="a">
+  <view class="a2">填写人：{{fillIn4}}</view>
+  <view class="a2">初步诊断结果：{{chuBuZhenDuan}}</view>
+  <view class="a2">是否自愿放弃后续治疗：{{huanZheZiYuanFangQiHouXuZhiLiao}}</view>
+  <view class="a2">初步诊断时间：{{firstDiagnosisTime}}</view>
+  <view class="a2">诊断医生：{{doctor}}</view>
+  <view class="a2">KillIP分级：{{killipFenJi}}</view>
+  <view class="a2">NYHA分级：{{nyhaFenJi}}</view>
+  <view class="a2">是否绕行急诊：{{raoXingJiZhen}}</view>
+  <view class="a2">是否绕行ICU：{{raoXingICU}}</view>
+</view> -->
+<!-- ACS诊疗 -->
+<!-- 初始药物治疗 -->
+<!-- <view class="a">
+  <view class="a2">初始药物治疗：{{orginMedician}}</view>
+  <view class="a2">抗血小板治疗：{{kangXueXiaoBanZhiLiao}}</view>
+  <view class="a2">抗凝治疗：{{kangNingZhiLiao}}</view>
+  <view class="a2">他汀治疗：{{taTingZhiLiao}}</view>
+  <view class="a2">β阻剂：{{beiTaZuJi}}</view>
+  <view class="a2">阿司匹林：{{aSiPiLin}}</view>
+  <view class="a2">时间：{{aSiPiLinTime}}</view>
+  <view class="a2">氯呲格雷：{{luCiGeLei}}</view>
+  <view class="a2">时间：{{luCiGeLeiTime}}</view>
+  <view class="a2">替格瑞洛{{tiGeRuiLuo}}</view>
+  <view class="a2">时间：{{tiGeRuiLuoTime}}</view>
+  <view class="a2">抗凝药物：{{Anticoagulants}}</view>
+  <view class="a2">剂量：{{dose}}</view>
+  <view class="a2">时间：{{AnticoagulantsTime}}</view>
+  <view class="a2">填写人：{{fillIn5}}</view>
+</view> -->
+<!-- Grace评估 -->
+<!-- <view class="a">
+  <view class="a2">Grace评估症状表现：{{gracePingGu}}</view>
+  <view class="a2">Grace极高危：{{graceJiGaoWei}}</view>
+  <view class="a2">填写人：{{fillIn6}}</view>
+  <view class="a2">年龄得分：{{ageScore}}</view>
+  <view class="a2">心率得分：{{heartScore}}</view>
+  <view class="a2">收缩压得分：{{bloodScore}}</view>
+  <view class="a2">肌酐得分：{{jiGanScore}}</view>
+  <view class="a2">KillIP得分：{{killipScore}}</view>
+  <view class="a2">危险因素得分：{{dangerScore}}</view>
+  <view class="a2">Grace评估首次总得分：{{allScore}}</view>
+  <view class="a2">NSTE-ACS危险分层：{{nsteacsWeiXianFenCeng}}</view>
+  <view class="a2">再次Grace评估时间：{{againTime}}</view>
+  <view class="a2">填写人：{{fillIn7}}</view>
+  <view class="a2">Grace评估再次总得分：{{allScore2}}</view>
+  <view class="a2">再次NSTE-ACS危险分层：{{nsteacsWeiXianFenCeng2}}</view>
+</view> -->
+<!-- Crusade评分 -->
+<!-- <view class="a">
+  <view class="a2">基线血细胞比容得分：{{jiXianScore}}</view>
+  <view class="a2">收缩压得分：{{bloodScore2}}</view>
+  <view class="a2">肌酐清除率得分：{{jiGanScore2}}</view>
+  <view class="a2">心率得分：{{heartScore2}}</view>
+  <view class="a2">其他危险因素得分：{{otherDangerScore}}</view>
+  <view class="a2">总得分：{{allScore3}}</view>
+  <view class="a2">危险分层：{{weiXianFenCeng}}</view>
+  <view class="a2">填写人：{{fillIn8}}</view>
+</view> -->
+<!-- NSTE-ACS处理策略 -->
+<!-- <view class="a">
+  <view class="a2">NSTE-ACS处理策略：{{nsteacsChuLiCeLue}}</view>
+  <view class="a2">24H内介入治疗：{{erSiHourNeiJieRuZhiLiao}}</view>
+  <view class="a2">实际介入治疗时间：{{actualCureTime}}</view>
+  <view class="a2">2H内介入治疗：{{erHourNeiJieRuZhiLiao}}</view>
+  <view class="a2">决定医生：{{decideDoctor}}</view>
+  <view class="a2">决定介入手术时间：{{decideOptionTime}}</view>
+  <view class="a2">启动导管室时间：{{startPipeTime}}</view>
+  <view class="a2">开始知情同意时间：{{beginInformedTime2}}</view>
+  <view class="a2">签署知情同意时间：{{signInformedTime2}}</view>
+  <view class="a2">填写人：{{fillIn9}}</view>
+</view> -->
+<!-- STEMI再灌注措施 -->
+<!-- <view class="a">
+  <view class="a2">STEMI表现：{{qiTaBiaoXian}}</view>
+  <view class="a2">填写人：{{fillIn10}}</view>
+  <view class="a2">STEMI是否再灌注：{{stemiZaiGuanZhiCuoShi}}</view>
+  <view class="a2">STEMI措施：{{stemiCuoShi}}</view>
+  <view class="a2">直接PCI：{{zhiJiePCI}}</view>
+  <view class="a2">决定医生：{{decideDoctor2}}</view>
+  <view class="a2">决定手术时间：{{decideOptionTime2}}</view>
+  <view class="a2">启动导管室时间：{{startPipeTime2}}</view>
+  <view class="a2">开始知情同意时间：{{beginInformedTime3}}</view>
+  <view class="a2">签署知情同意时间：{{signInformedTime3}}</view>
+  <view class="a2">STEMI灌注措施：{{cuoShi}}</view>
+  <view class="a2">灌注决定时间：{{decideOptionTime3}}</view>
+  <view class="a2">灌注开始时间：{{startTime3}}</view>
+</view> -->
+<!-- 导管室 -->
+<!-- <view class="a">
+  <view class="a2">导管室激活时间：{{pipeActivationTime}}</view>
+  <view class="a2">患者到达导管室时间：{{getPipeTime}}</view>
+  <view class="a2">开始穿侧时间：{{startPunctureTime}}</view>
+  <view class="a2">造影开始时间：{{radiographyTime}}</view>
+  <view class="a2">造影时TIMI：{{timi}}级</view>
+  <view class="a2">术中抗凝给药时间：{{anticoagulationTime}}</view>
+  <view class="a2">术中抗凝物：{{anticoagulation}}</view>
+  <view class="a2">剂量：{{anticoagulationDose}}单位</view>
+  <view class="a2">导丝通过时间：{{wireTime}}</view>
+  <view class="a2">手术结束时间：{{overOptionTime}}</view>
+  <view class="a2">介入医生：{{interventionDoctor}}</view>
+  <view class="a2">D2W时间是否延误：{{d2wShiJianShiFouYanWu}}</view>
+  <view class="a2">D2W延误原因：{{d2wYanWuYuanYin}}</view>
+  <view class="a2">入路：{{ruLu}}</view>
+
+
+  <view class="a2">罪犯血管{{criminalBlood}}段</view>
+  <view class="a2">狭窄程度：{{narrow}}%</view>
+  <view class="a2">造影时TIMI：{{radiographyTimi}}</view>
+  <view class="a2">支架内血栓：{{zhiJiaNeiXueShuan}}</view>
+  <view class="a2">分叉病变：{{fenChaBingBian}}</view>
+  <view class="a2">CTO：{{cto}}</view>
+  <view class="a2">钙化病变：{{gaiHuaBingBian}}</view>
+  <view class="a2">PCI：{{pci}}</view>
+  <view class="a2">书中处理：{{shuZhongChuLi}}</view>
+  <view class="a2">术后TIMI：{{optionedTimi}}级</view>
+  <view class="a2">植入支架：{{shelf}}枚</view>
+  <view class="a2">支架种类：{{zhiJiaZhongLei}}</view>
+
+  <view class="a2">非罪犯血管1：{{nocriminalBlood1}}</view>
+  <view class="a2">狭窄程度：{{narrow1}}%</view>
+  <view class="a2">造影时TIMI：{{radiographyTimi1}}</view>
+  <view class="a2">支架内血栓：{{zhiJiaNeiXueShuan2}}</view>
+  <view class="a2">分叉病变：{{fenChaBingBian2}}</view>
+  <view class="a2">CTO：{{cto2}}</view>
+  <view class="a2">钙化病变：{{gaiHuaBingBian2}}</view>
+  <view class="a2">PCI：{{pci2}}</view>
+  <view class="a2">书中处理：{{shuZhongChuLi1}}</view>
+  <view class="a2">术后TIMI：{{optionedTimi1}}级</view>
+  <view class="a2">植入支架：{{shelf1}}枚</view>
+  <view class="a2">支架种类：{{zhiJiaZhongLei2}}</view>
+
+  <view class="a2">非罪犯血管2：{{nocriminalBlood2}}</view>
+  <view class="a2">狭窄程度：{{narrow2}}%</view>
+  <view class="a2">造影时TIMI：{{radiographyTimi2}}</view>
+  <view class="a2">支架内血栓：{{zhiJiaNeiXueShuan3}}</view>
+  <view class="a2">分叉病变：{{fenChaBingBian3}}</view>
+  <view class="a2">CTO：{{cto3}}</view>
+  <view class="a2">钙化病变：{{gaiHuaBingBian3}}</view>
+  <view class="a2">PCI：{{pci3}}</view>
+  <view class="a2">书中处理：{{shuZhongChuLi2}}</view>
+  <view class="a2">术后TIMI：{{optionedTimi2}}级</view>
+  <view class="a2">植入支架：{{shelf2}}枚</view>
+  <view class="a2">支架种类：{{zhiJiaZhongLei3}}</view>
+
+  <view class="a2">非罪犯血管3：{{nocriminalBlood3}}</view>
+  <view class="a2">狭窄程度：{{narrow3}}%</view>
+  <view class="a2">造影时TIMI：{{radiographyTimi3}}</view>
+  <view class="a2">支架内血栓：{{zhiJiaNeiXueShuan4}}</view>
+  <view class="a2">分叉病变：{{fenChaBingBian4}}</view>
+  <view class="a2">CTO：{{cto4}}</view>
+  <view class="a2">钙化病变：{{gaiHuaBingBian4}}</view>
+  <view class="a2">PCI：{{pci4}}</view>
+  <view class="a2">书中处理：{{shuZhongChuLi3}}</view>
+  <view class="a2">术后TIMI：{{optionedTimi3}}级</view>
+  <view class="a2">植入支架：{{shelf3}}枚</view>
+  <view class="a2">支架种类：{{zhiJiaZhongLei4}}</view>
+
+</view> -->
+<!-- 主动脉夹层诊疗 -->
+<!-- <view class="a">
+  <view class="a2">初步诊断时间2：{{firstDiagnosisTime2}}</view>
+  <view class="a2">医生2：{{doctor2}}</view>
+  <view class="a2">影像学检查：{{yingXiangXueJianCha}}</view>
+  <view class="a2">通知CT室时间：{{informedCTTime}}</view>
+  <view class="a2">完成准备时间：{{okPrepareTime}}</view>
+  <view class="a2">开始扫描时间：{{beginScanTime}}</view>
+  <view class="a2">CT报告时间：{{ctReporterTime}}</view>
+  <view class="a2">通知：{{inform}}  会诊：{{diagnosisTime}}</view>
+  <view class="a2">会诊时间2：{{diagnosisTime2}}</view>
+  <view class="a2">夹层类型：{{jiaCengLeiXing}}</view>
+  <view class="a2">治疗策略：{{zhiLiaoCeLue}}</view>
+</view> -->
+<!-- 肺栓塞诊疗 -->
+<!-- <view class="a">
+  <view class="a2">初步诊断时间3：{{firstDiagnosisTime3}}</view>
+  <view class="a2">医生3：{{doctor3}}</view>
+  <view class="a2">影像学检查2：{{yingXiangXueJianCha2}}</view>
+  <view class="a2">通知CT室时间2：{{informedCTTime2}}</view>
+  <view class="a2">完成准备时间2：{{okPrepareTime2}}</view>
+  <view class="a2">开始扫描时间2：{{beginScanTime2}}</view>
+  <view class="a2">CT报告时间2：{{ctReporterTime2}}</view>
+  <view class="a2">危险分层：{{weiXianFenCeng}}</view>
+  <view class="a2">开始抗凝时间：{{AnticoagulantsTime2}}</view>
+</view> -->
+<!-- 其他胸痛 -->
+<!-- <view class="a">
+  <view class="a2">其他胸痛：{{qiTaXiongTong}}</view>
+  <view class="a2">胸痛表现：{{xiongTongBiaoXian}}</view>
+  <view class="a2">其他非心源性胸痛：{{qiTaXiongTong2}}</view>
+  <view class="a2">其他胸痛表现：{{qiTaXiongTongBiaoXian}}</view>
+  <view class="a2">其他胸痛3：{{qiTaXiongTong3}}</view>
+  <view class="a2">初步诊断时间4：{{firstDiagnosisTime4}}</view>
+  <view class="a2">诊断医生：{{doctor4}}</view>
+  <view class="a2">处理措施：{{chuLiCuoShi}}</view>
+</view> -->
+<!-- 出院诊断 -->
+<!-- <view class="a">
+  <view class="a2">诊断情况：{{xiongTong}}</view>
+  <view class="a2">非ACS心源性胸痛：{{xinYuanXingXiongTong}}</view>
+  <view class="a2">非ACS心源性胸痛表现：{{xiongTongBiaoXian}}</view>
+  <view class="a2">其他非心源性胸痛：{{qiTaXinYuanXingXiongTong}}</view>
+  <view class="a2">其他非心源性胸痛表现：{{qiTaBiaoXian}}</view>
+  <view class="a2">确诊时间：{{diagnosisTime}}</view>
+  <view class="a2">住院天数：{{inHospitalDay}}天</view>
+  <view class="a2">总费用：{{allCost}}</view>
+</view> -->
+<!-- 患者转归 -->
+<!-- <view class="a">
+  <view class="a2">转归类型：{{zhuanGuiLeiXing}}</view>
+  <view class="a2">出院时间：{{leftHospitalTime}}</view>
+  <view class="a2">治疗结果：{{zhiLiaoJieGuo}}</view>
+  <view class="a2">转归类型2：{{zhuanGuiLeiXing2}}</view>
+  <view class="a2">离开本院大门时间：{{leftHospitalGateTime}}</view>
+  <view class="a2">医院名称：{{hospitalName}}</view>
+  <view class="a2">转运PCI：{{shiFouZhuanYunPCI}}</view>
+  <view class="a2">远程心电图传输：{{shiFouYuanChengXinDianTu}}</view>
+  <view class="a2">转归类型3：{{zhuanGuiLeiXing3}}</view>
+  <view class="a2">转科时间：{{turnDeapartmentTime}}</view>
+  <view class="a2">接诊科室：{{cureInDepartment}}</view>
+  <view class="a2">转科原因：{{turnDeapartmentReason}}</view>
+  <view class="a2">转归类型4：{{zhuanGuiLeiXing4}}</view>
+  <view class="a2">死亡时间：{{dieTime}}</view>
+  <view class="a2">死亡原因：{{dieReason}}</view>
+  <view class="a2">离院宣教：{{liYuanXuanJiao}}</view>
+  <view class="a2">COCID-19：{{cocid19}}</view>
+</view> -->
+<!-- 住院期间用药 -->
+<!-- <view class="a">
+  <view class="a2">降糖药：{{jiangTangYao}}</view>
+  <view class="a2">口服抗凝药：{{kouFuKangNingYao}}</view>
+  <view class="a2">PCSK9：{{pcsk9}}</view>
+  <view class="a2">单次剂量:{{dose}}mg</view>
+</view> -->
+<!-- ACS患者 -->
+<!-- <view class="a">
+  <view class="a2">院内新发心衰：{{xinFaXinShuai}}</view>
+  <view class="a2">ARNI：{{arni}}</view>
+  <view class="a2">住院期间并发症：{{zhuYuanQiJianBingFaZheng}}</view>
+  <view class="a2">危险因素:{{weiXianYinSu}}</view>
+  <view class="a2">合并疾病：{{heBingJiBing}}</view>
+  <view class="a2">检查结果1：{{jianChaJieGuo}}</view>
+  <view class="a2">肌钙蛋白：{{jiGaiDanbai}}</view>
+  <view class="a2">检查结果2:{{jianChaJieGuo2}}</view>
+  <view class="a2">BNP最高值：{{bnpZuiGaoZhi2}}</view>
+  <view class="a2">检查结果3:{{jianChaJieGuo3}}</view>
+  <view class="a2">NT-proBNP最高值：{{ntproBNP}}</view>
+  <view class="a2">检查结果4:{{jianChaJieGuo4}}</view>
+  <view class="a2">TC最高值：{{tcZuiGaoZhi}}</view>
+  <view class="a2">检查结果5:{{jianChaJieGuo5}}</view>
+  <view class="a2">TG最高值：{{tgZuiGaoZhi}}</view>
+  <view class="a2">检查结果6:{{jianChaJieGuo6}}</view>
+  <view class="a2">HDL-C最高值{{hdlcZuiGaoZhi}}</view>
+  <view class="a2">检查结果7:{{jianChaJieGuo7}}</view>
+  <view class="a2">LDL-C最高值：{{ldlcZuiGaoZhi}}</view>
+  <view class="a2">检查结果8:{{jianChaJieGuo8}}</view>
+  <view class="a2">超声LVEF最低值：{{lvefZuiDiZHi}}</view>
+  <view class="a2">检查结果9:{{jianChaJieGuo9}}</view>
+  <view class="a2">检查结果10：{{jianChaJieGuo10}}</view>
+  <view class="a2">药物1:{{yaoWu1}}</view>
+  <view class="a2">药物2:{{yaoWu2}}</view>
+  <view class="a2">药物3:{{yaoWu3}}</view>
+  <view class="a2">药物4:{{yaoWu4}}</view>
+</view> -->

@@ -1,0 +1,186 @@
+.myTap {
+  border: 5px groove greenyellow;
+}
+
+.ipt1 {
+  border-bottom: 1px dashed black;
+  margin: 0px 30px 1px 10px;
+}
+
+.ipt2 {
+  border-bottom: 1px dashed black;
+  margin: 0px 150px 1px 5px;
+}
+
+.b {
+  margin: 5px 40px 5px 10px;
+}
+
+.a1 {
+  text-align: center;
+  font-size: large;
+  line-height: 50px;
+  font-weight: 900;
+  color: rgb(111, 149, 221);
+}
+
+
+.a2 {
+  border: 2px solid rgb(163, 175, 184);
+  margin: 5px 10px 1px 5px;
+}
+
+.a3 {
+  border: 4px solid sienna;
+}
+
+.a4 {
+  border-top-style: dotted;
+  border-right-style: none;
+  border-bottom-style: dotted;
+  border-left-style: none;
+  border-color: rgb(163, 175, 184);
+}
+
+.a5 {
+  border-top-style: dotted;
+  border-right-style: none;
+  border-bottom-style: dotted;
+  border-left-style: none;
+  border-color: rgb(163, 175, 184);
+}
+
+.a6 {
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: dotted;
+  border-left-style: none;
+  border-color: rgb(163, 175, 184);
+}
+
+.a7 {
+  border-top-style: dotted;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-color: rgb(163, 175, 184);
+}
+
+.a {
+  text-align: center;
+
+  color: black;
+  font-weight: 900;
+}
+
+.c1 {
+  line-height: 150%;
+}
+
+.text {
+  text-decoration-line: line-through;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.top {
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: none;
+  border-left-style: solid;
+}
+
+.down {
+  border-top-style: none;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+}
+
+.btn{
+  background-color:#00FFFF;
+}
+image{
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+.ac {
+  text-align: center;
+  background: black;
+  color: white;
+}
+
+
+.a2c {
+  border: 2px solid lightgrey;
+  margin: 5px 5px;
+}
+
+.a3c {
+  border: 2px solid lightgrey;
+  margin: 5px 5px;
+  border-style: dotted;
+}
+
+.a4c {
+  border: 1px solid lightgray;
+  margin: 5px 5px;
+}
+
+
+.tablec {
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.trc {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.thc {
+  font-size: 14px;
+}
+
+.thc,
+.tdc {
+  padding: 8px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.sectionc {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+page{
+  height:100%;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+}
+.swiper {
+  height: 400rpx;
+  width: 100%;
+}
+.swiper-image {
+  height: 100%;
+  width: 100%;
+}
+.slide-image{
+   height: 100%;
+  width: 100%;
+}

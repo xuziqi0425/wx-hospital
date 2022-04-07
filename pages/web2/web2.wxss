@@ -1,0 +1,81 @@
+.a1 {
+  border: 1px solid black;
+  margin: 3px 3px;
+}
+
+.a {
+  text-align: center;
+  background: black;
+  color: white;
+}
+
+.a2 {
+  border: 2px blue;
+  margin: 3px;
+  padding: 5px
+}
+
+.a3 {
+  border: 2px solid black;
+  margin: 3px;
+  padding: 5px
+}
+
+.a4 {
+  border: 1px solid rgb(163, 175, 184);
+  margin: 3px;
+  padding: 5px;
+}
+
+.a5 {
+  border: 1px solid lightskyblue;
+  margin: 3px;
+  padding: 3px
+}
+
+.a6 {
+  font: bold;
+}
+
+.ipt1 {
+  border: 1px solid black;
+  margin: 3px 3px;
+}
+
+.ipt11 {
+  border: 1px solid black;
+  margin: 3px 3px;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 3px 3px;
+}
+
+.tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.th {
+  font-size: 14px;
+}
+
+.th,
+.td {
+  padding: 1px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.th,
+.td1 {
+  padding: 1px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid black;
+}
