@@ -5,8 +5,13 @@
 
 ### 伸缩式表单
 ![S CMD)(SE Y7Z`N~J20VST6](https://user-images.githubusercontent.com/79557958/162120555-21e4ea76-3cc6-48a2-a662-59f286db1bfe.png)
+
+![%{_092 9~VL}1U{MK@@M$WH](https://user-images.githubusercontent.com/79557958/162121146-deba48fb-8d2e-435c-a840-58115e3e65fe.png)
+
+
 ### 信息显示
 
-![ZSIM EYGX03XNII_7WLB} C](https://user-images.githubusercontent.com/79557958/162120649-91a2a6fd-b0c2-4854-bf4f-da29f5642fae.png)
+![{D}ZV6P43A%4`B02~}S 7AB](https://user-images.githubusercontent.com/79557958/162121212-951e5e86-3bce-4209-89fe-634bba27da6c.png)
+
 
 
